@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Industrial</title>
+  <title>BUCODENT</title>
   <meta content="Sistema web de Ing Industrial" name="description">
   <meta content="Uagrm, Ing industrial, FCET" name="keywords">
   <meta content="Nells A. Vidal V." name="author">
@@ -48,12 +48,12 @@
 
 <body>
   <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
+  <header id="header" class="d-flex align-items-center" style="background-color: #00BFFF">
     <div class="container d-flex align-items-center">
       <div id="logo" class="me-auto">
         <a><img src="{{ asset('assets/img/logo.png') }}" alt=""></a>
       </div>
-      <nav id="navbar" class="navbar order-last order-lg-0">
+      <nav id="navbar" class="navbar order-last order-lg-0" >
         <ul>
           <li><a class="nav-link scrollto"><b> Hola {{ auth()->user()->name }}, Rol {{ auth()->user()->rol }} </b></a>
           </li>
@@ -128,12 +128,12 @@
 
   @yield('content')
   @include('sweetalert::alert')
-  <footer class="text-center text-lg-start text-white" style="background-color: #2bd672">
+  <footer class="text-center text-lg-start text-white" style="background-color: #00BFFF">
     <!-- Section: Social media -->
-    <section class="d-flex justify-content-between p-4" style="background-color: #ffffff">
+    <section class="d-flex justify-content-between p-4" style="background-color:#ffffff">
       <!-- Left -->
       <div class="me-5">
-        <span>Ingenieria Industrial:</span>
+        <span>Clinica Bucodent:</span>
       </div>
 
     </section>
@@ -149,10 +149,11 @@
             <img style="border: 0px solid; display: inline;" alt="contador de visitas" src="https://websmultimedia.com/contador-de-visitas.php?id=4022"></a><br><a href='https://websmultimedia.com/contador-de-visitas-gratis'></a><br><a href='http://www.websmultimedia.com/diseno-web/sevilla'></a></center>
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <!-- Content -->
-            <h6 class="text-uppercase fw-bold">INGENIERIA INDUSTRIAL</h6>
+            <h6 class="text-uppercase fw-bold">Clinica BUCODENT</h6>
             <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #ffffff; height: 2px" />
             <p style="color: #ffffff">
-              La carrera de Ingeniería Industrial nació en respuesta a los requerimientos de profesionales capaces de dirigir la optimización y mejora de los procesos productivos bajo criterios de calidad, seguridad y respeto al medio ambiente.
+            La clinica BUCODENT estamos especializados en diferentes servicios odontológicos. El objetivo de nuestra clínica dental es
+              ofrecer un óptimo tratamiento para mejorar la salud de nuestros clientes en Santa Cruz de la Sierra.
             </p>
           </div>
           <!-- Grid column -->
@@ -160,19 +161,19 @@
           <!-- Grid column -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold">Servicios a</h6>
+            <h6 class="text-uppercase fw-bold">Servicios de</h6>
             <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #ffffff; height: 2px" />
             <p>
-              <a href="#" class="text-white">Estudiante</a>
+              <a href="#" class="text-white">Odontologia General</a>
             </p>
             <p>
-              <a href="#" class="text-white">Docente</a>
+              <a href="#" class="text-white">Odontopediatria</a>
             </p>
             <p>
-              <a href="#" class="text-white">Administrativo</a>
+              <a href="#" class="text-white">Ortondocia</a>
             </p>
             <p>
-              <a href="#" class="text-white">Sociedad</a>
+              <a href="#" class="text-white">Cirugia Bucal</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -186,13 +187,13 @@
               <a href="#" class="text-white">Excelencia</a>
             </p>
             <p>
-              <a href="#" class="text-white">Mejora</a>
+              <a href="#" class="text-white">Integridad</a>
             </p>
             <p>
-              <a href="#" class="text-white">Acreditación</a>
+              <a href="#" class="text-white">Calidad</a>
             </p>
             <p>
-              <a href="#" class="text-white">Virtualización</a>
+              <a href="#" class="text-white">Responsabilidad</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -202,10 +203,10 @@
             <!-- Links -->
             <h6 class="text-uppercase fw-bold">Contact</h6>
             <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #ffffff; height: 2px" />
-            <p style="color: #ffffff"><i class="bi bi-geo-alt-fill"></i> Av. Busch U.V. 32, Ciudad Universitaria, Módulo 222.</p>
-            <p style="color: #ffffff"><i class="bi bi-envelope-fill"></i> industrial@gmail.com</p>
-            <p style="color: #ffffff"><i class="bi bi-telephone-forward-fill"></i> 3 - 3550498 interno</p>
-            <p style="color: #ffffff"><i class="bi bi-facebook"></i> /ingindustrial</p>
+            <p style="color: #ffffff"><i class="bi bi-geo-alt-fill"></i>Av. Grigota, Calle Jose Salvatierra 44 </p>
+            <p style="color: #ffffff"><i class="bi bi-envelope-fill"></i> bucodent@gmail.com</p>
+            <p style="color: #ffffff"><i class="bi bi-telephone-forward-fill"></i> 74441050 </p>
+            <p style="color: #ffffff"><i class="bi bi-facebook"></i> /Odontologia.Integral.Bucodent</p>
           </div>
           <!-- Grid column -->
         </div>
@@ -216,8 +217,8 @@
 
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-      © 2022 Copyright:
-      <a class="text-white" href="#">Ing. Industrial UAGRM-FCET</a>
+      © 2023 Copyright:
+      <a class="text-white" href="#">Clinica Integral BUCODENT</a>
     </div>
     <!-- Copyright -->
   </footer>

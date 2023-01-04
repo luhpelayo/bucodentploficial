@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 order-md-2">
-          <img src="images/LogoLogin.png" alt="Image">
+          <img src="assets/img/Logologin1.png" alt="Image">
         </div>
         <div class="col-md-6 contents">
           <div class="row justify-content-center">
@@ -70,16 +70,22 @@
               <label for="rol">Rol:</label>
                 <select name="rol" id="rol">
                   <option value="Admin">Admin</option>
+<<<<<<< HEAD
                 <option value="Secretaria">Secretaria</option>
                 <option value="Doctor">Doctor</option>
+=======
+                <option value="Director">Doctor</option>
+                <option value="Acreditacion">Secretaria</option>
+
+>>>>>>> f11a3d61a40e529121d6f3588ac29bb30a44e5da
                 </select>
                 <br>
                 <br>
-              <input type="submit" value="Registrar" class="btn text-white btn-block btn-primary">
+              <input type="submit" value="Registrar" class="btn text-white btn-block btn-primary" style="background-color: #00BFFF">
             </form>
             </div>
           </div>
-        </div>  
+        </div>
       </div>
     </div>
   </div>

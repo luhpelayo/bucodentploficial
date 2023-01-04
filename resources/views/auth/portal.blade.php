@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     <div class="page-header">
-        <h1 style="text-align:center; color: red; font-weight: bolder;">BIENVENIDO AL PORTAL DE INGENIERIA INDUSTRIAL
+        <h1 style="text-align:center; color: red; font-weight: bolder;">BIENVENIDO AL PORTAL DE BUCODENT
         </h1>
     </div>
     <div class="container">
@@ -13,12 +13,12 @@
                     <a href="{{ route ('std.index')}}">
                         <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
                         <h2 style="color: maroon;">Estudiantes</h2>
-                        <p style="text-align: left;">
-                            <span class="fa fa-info-circle"></span>
+                        <p style="color: #00BFFF; text-align: left;" >
+                            <span class="fa fa-info-circle" ></span>
                             Usted podra registrar toda la informacion necesaria de un estudiante, dicha informacion sera
                             utilizada en otros procesos.
                         </p>
-                        <a href="{{ route ('std.index')}}" class="btn btn-success" title="Ir">Ingresar</a>
+                        <a href="{{ route ('std.index')}}" class="btn btn-success" title="Ir" >Ingresar</a>
                     </a>
                 </div>
             </div>
@@ -150,7 +150,7 @@
                     <a href="{{ route ('visit.index')}}">
                         <img src="{{URL::asset('icons/visita.png')}}" alt="" class="img-rounded img-thumbnail" />
                         <h2 style="color: maroon;">Visitas Técnicas</h2>
-                        <p style="text-align: left;">
+                        <p style="color: #00BFFF; text-align: left;">
                             <span class="fa fa-info-circle"></span>
                             Aqui se puede almacenar los documentos de respaldo (fotos e informes) de las visitas de los
                             estudiantes.
@@ -166,7 +166,7 @@
                     <a href="{{ route ('doc.index')}}">
                         <img src="{{URL::asset('icons/doc.png')}}" alt="" class="img-rounded img-thumbnail" />
                         <h2 style="color: maroon;">Documentos</h2>
-                        <p style="text-align: left;">
+                        <p style="color: #00BFFF; text-align: left;">
                             <span class="fa fa-info-circle"></span>
                             En este modulo se registran documentos administrativos tales como modelos de cartas,
                             programas analíticos, estructuras, etc.
@@ -229,7 +229,7 @@
                     <a href="{{ route ('report.index')}}">
                         <img src="{{URL::asset('icons/report.png')}}" alt="" class="img-rounded img-thumbnail" />
                         <h2 style="color: maroon;">Reportes y Gráficos</h2>
-                        <p style="text-align: left;">
+                        <p style="color: #00BFFF; text-align: left;">
                             <span class="fa fa-info-circle"></span>
                             Se generan informes estadisticos y Dinamicos sobre cualquier modulo en base a la informacion
                             que usted desee.

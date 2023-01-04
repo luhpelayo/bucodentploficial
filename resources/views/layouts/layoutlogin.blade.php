@@ -49,7 +49,7 @@
 
 <body>
   <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
+  <header id="header" class="d-flex align-items-center" style="background-color: #00BFFF">
     <div class="container d-flex align-items-center">
 
       <div id="logo" class="me-auto">
@@ -61,17 +61,17 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto" href=" {{ route('welcome.index') }} ">Inicio</a></li>
-          <li><a target="_blank" class="nav-link scrollto" href="https://www.facebook.com/ingindustrialuagrm">Consultas</a></li>
-          <li><a target="_blank" class="nav-link scrollto " href="https://www.uagrm.edu.bo/carreras/fcet-cii">Información</a></li>
-          <li><a target="_blank" class="nav-link scrollto" href="https://www.facebook.com/ingindustrialuagrm">Nosotros</a></li>
-          <li><a target="_blank" class="nav-link scrollto" href="https://www.uagrm.edu.bo/carreras/fcet-cii">Contáctanos</a></li>
+          <li><a target="_blank" class="nav-link scrollto" href="https://www.facebook.com/Odontologia.Integral.Bucodent">Consultas</a></li>
+          <li><a target="_blank" class="nav-link scrollto " href="https://www.facebook.com/Odontologia.Integral.Bucodent">Información</a></li>
+          <li><a target="_blank" class="nav-link scrollto" href="https://www.facebook.com/Odontologia.Integral.Bucodent">Nosotros</a></li>
+          <li><a target="_blank" class="nav-link scrollto" href="https://www.facebook.com/Odontologia.Integral.Bucodent">Contáctanos</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
       <div class="header-social-links d-flex align-items-center">
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="https://www.facebook.com/ingindustrialuagrm" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.facebook.com/Odontologia.Integral.Bucodent" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
       </div>

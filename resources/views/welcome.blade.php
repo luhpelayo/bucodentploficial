@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Industrial</title>
+  <title>BUCODENT</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -55,27 +55,27 @@
     <div class="container text-center">
       <div class="row">
         <div class="col-md-12">
-          <a class="hero-brand" title="logo"><img alt="Industrial Logo" src="assets/img/logo.png"></a>
+          <a class="hero-brand" title="logo"><img alt="BUCODENT Logo" src="assets/img/logo.png"></a>
         </div>
       </div>
 
       <div class="col-md-12">
         <h1>
-          INGENIERIA INDUSTRIAL
+          BUCODENT CENTRO ODONTOLOGICO INTEGRAL
         </h1>
 
         <p class="tagline">
-          SI PUEDES IMAGINAR, PUEDES CREAR
+        Cada diente en la cabeza de un hombre, es más valioso que un diamante.
         </p>
-        <a class="btn btn-full scrollto" href="{{ route('login.index') }}">Ingresar</a>
-        <a class="btn btn-full scrollto" href="{{ route('register.index') }}">Registrar</a>
+        <a class="btn btn-full scrollto" href="{{ route('login.index') }}" style="background-color: #00BFFF">Ingresar</a>
+        <a class="btn btn-full scrollto" href="{{ route('register.index') }}" style="background-color: #00BFFF">Registrar</a>
       </div>
     </div>
 
   </section><!-- End Hero -->
 
   <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
+  <header id="header" class="d-flex align-items-center" style="background-color: #00BFFF">
     <div class="container d-flex align-items-center">
 
       <div id="logo" class="me-auto">
@@ -88,20 +88,20 @@
         <ul>
           <li><a class="nav-link scrollto" href="">Inicio</a></li>
           <li><a target="_blank" class="nav-link scrollto"
-              href="https://www.facebook.com/ingindustrialuagrm">Consultas</a></li>
+              href="https://www.facebook.com/Odontologia.Integral.Bucodent">Consultas</a></li>
           <li><a target="_blank" class="nav-link scrollto "
-              href="https://www.uagrm.edu.bo/carreras/fcet-cii">Información</a></li>
+              href="https://www.facebook.com/Odontologia.Integral.Bucodent">Información</a></li>
           <li><a target="_blank" class="nav-link scrollto"
-              href="https://www.facebook.com/ingindustrialuagrm">Nosotros</a></li>
+              href="https://www.facebook.com/Odontologia.Integral.Bucodent">Nosotros</a></li>
           <li><a target="_blank" class="nav-link scrollto"
-              href="https://www.uagrm.edu.bo/carreras/fcet-cii">Contáctanos</a></li>
+              href="https://www.facebook.com/Odontologia.Integral.Bucodent">Contáctanos</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
       <div class="header-social-links d-flex align-items-center">
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="https://www.facebook.com/ingindustrialuagrm" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.facebook.com/Odontologia.Integral.Bucodent" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
       </div>
@@ -113,43 +113,42 @@
     <section class="about" id="about">
       <div class="container text-center">
         <h2>
-          Estadisticas Rápidas de la Carrera
+          Estadisticas Rápidas de la Clinica Dental
         </h2>
         <p>
-          Todos los datos visualizados han sido sacados de forma automatica desde el servidor de la carrera de
-          Ingenieria Industrial tal informacion es actualizada dia a dia por nuestro equipo de trabajo.
+          Todos los datos visualizados han sido sacados de su archivos que estan registrado de manera manual de la clinica BUCODENT.
         </p>
 
-        <div class="row stats-row">
-          <div class="stats-col text-center col-md-3 col-sm-6">
-            <div class="circle">
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
-                class="purecounter stats-no"></span>
-              Documentos Digitales
+        <div class="row stats-row" >
+          <div class="stats-col text-center col-md-3 col-sm-6" >
+            <div class="circle" >
+              <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1"
+                class="purecounter stats-no" style="background-color: #00BFFF"></span>
+              Registro de pacientes
             </div>
           </div>
 
           <div class="stats-col text-center col-md-3 col-sm-6">
             <div class="circle">
-              <span data-purecounter-start="0" data-purecounter-end="79" data-purecounter-duration="1"
-                class="purecounter stats-no"></span>
-              Estudiantes Titulados
+              <span data-purecounter-start="0" data-purecounter-end="120" data-purecounter-duration="1"
+                class="purecounter stats-no" style="background-color: #00BFFF"></span>
+              Servicios
             </div>
           </div>
 
           <div class="stats-col text-center col-md-3 col-sm-6">
             <div class="circle">
-              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"
-                class="purecounter stats-no"></span>
-              Insercion Laboral
+              <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1"
+                class="purecounter stats-no" style="background-color: #00BFFF"></span>
+              Operaciones
             </div>
           </div>
 
           <div class="stats-col text-center col-md-3 col-sm-6">
             <div class="circle">
-              <span data-purecounter-start="0" data-purecounter-end="68" data-purecounter-duration="1"
-                class="purecounter stats-no"></span>
-              Actas Registradas
+              <span data-purecounter-start="0" data-purecounter-end="140" data-purecounter-duration="1"
+                class="purecounter stats-no" style="background-color: #00BFFF"></span>
+              Tratamientos
             </div>
           </div>
         </div>
@@ -162,44 +161,44 @@
 
       <div class="mySlides fade">
         <div class="numbertext">1 / 7</div>
-        <img src={{ asset('images/carousel/hero_1.jpg') }} style="width:100%">
-        <div class="text">Ingenieria Industrial</div>
+        <img src="assets/img/hero_1.jpg"  style="width:100%">
+        <div class="text">BUCODENT</div>
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">2 / 7</div>
-        <img src={{ asset('images/carousel/hero_2.jpg') }} style="width:100%">
-        <div class="text">Ingenieria Industrial</div>
+        <img src="assets/img/hero_2.jpg" style="width:100%">
+        <div class="text">BUCODENT</div>
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">3 / 7</div>
-        <img src={{ asset('images/carousel/hero_3.jpg') }} style="width:100%">
-        <div class="text">Ingenieria Industrial</div>
+        <img src="assets/img/hero_3.jpg" style="width:100%">
+        <div class="text">BUCODENT</div>
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">4 / 7</div>
-        <img src={{ asset('images/carousel/hero_4.jpg') }} style="width:100%">
-        <div class="text">Ingenieria Industrial</div>
+        <img src="assets/img/hero_4.jpg" style="width:100%">
+        <div class="text">BUCODENT</div>
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">5 / 7</div>
-        <img src={{ asset('images/carousel/hero_5.jpg') }} style="width:100%">
-        <div class="text">Ingenieria Industrial</div>
+        <img src="assets/img/hero_5.jpg" style="width:100%">
+        <div class="text">BUCODENT</div>
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">6 / 7</div>
-        <img src={{ asset('images/carousel/hero_6.jpg') }} style="width:100%">
-        <div class="text">Ingenieria Industrial</div>
+        <img src="assets/img/hero_6.jpg" style="width:100%">
+        <div class="text">BUCODENT</div>
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">7 / 7</div>
-        <img src={{ asset('images/carousel/hero_7.jpg') }} style="width:100%">
-        <div class="text">Ingenieria Industrial</div>
+        <img src="assets/img/hero_7.jpg" style="width:100%">
+        <div class="text">BUCODENT</div>
       </div>
 
     </div>
@@ -219,17 +218,17 @@
 
     <!-- ======= Team Section ======= -->
     <section class="team" id="team">
-      <div class="container">
-        <h2 class="text-center">
+      <div class="container" >
+        <h2 class="text-center" style="color: #00BFFF;" >
           Conoce a todo nuestro equipo de trabajo
         </h2>
 
         <div class="row">
           <div class="col-sm-3 col-xs-6">
             <div class="card card-block">
-              <a href="#"><img alt="" class="team-img" src="assets/img/team-1.jpg">
-                <div class="card-title-wrap">
-                  <span class="card-title">Fernando Canavire</span> <span class="card-text">Director De Carrera</span>
+              <a href="#"><img alt="" class="team-img" src="assets/img/team-1.jpg" >
+                <div class="card-title-wrap" style="background-color: #00BFFF">
+                  <span class="card-title">Dr. Jose Aguirre</span> <span class="card-text">Dentista</span>
                 </div>
 
                 <div class="team-over">
@@ -253,8 +252,8 @@
           <div class="col-sm-3 col-xs-6">
             <div class="card card-block">
               <a href="#"><img alt="" class="team-img" src="assets/img/team-2.jpg">
-                <div class="card-title-wrap">
-                  <span class="card-title">Fabiola Padilla</span> <span class="card-text">Apoyo Administrativo</span>
+                <div class="card-title-wrap" style="background-color: #00BFFF">
+                  <span class="card-title">Dra. Yoselin Mercado</span> <span class="card-text">Dentista</span>
                 </div>
 
                 <div class="team-over">
@@ -278,8 +277,8 @@
           <div class="col-sm-3 col-xs-6">
             <div class="card card-block">
               <a href="#"><img alt="" class="team-img" src="assets/img/team-3.jpg">
-                <div class="card-title-wrap">
-                  <span class="card-title">Germán Marquez</span> <span class="card-text">Apoyo de Acreditación</span>
+                <div class="card-title-wrap" style="background-color: #00BFFF">
+                  <span class="card-title">Dra. Gabriela Paz</span> <span class="card-text">Dentista</span>
                 </div>
 
                 <div class="team-over">
@@ -303,8 +302,8 @@
           <div class="col-sm-3 col-xs-6">
             <div class="card card-block">
               <a href="#"><img alt="" class="team-img" src="assets/img/team-4.jpg">
-                <div class="card-title-wrap">
-                  <span class="card-title">Jessica Rojas</span> <span class="card-text">Apoyo de Extensión</span>
+                <div class="card-title-wrap" style="background-color: #00BFFF">
+                  <span class="card-title">Dr. Pedro Molina</span> <span class="card-text">Dentista</span>
                 </div>
 
                 <div class="team-over">
@@ -324,97 +323,25 @@
               </a>
             </div>
           </div>
-          <div class="col-sm-3 col-xs-6">
-            <div class="card card-block">
-              <a href="#"><img alt="" class="team-img" src="assets/img/team-4.jpg">
-                <div class="card-title-wrap">
-                  <span class="card-title">Gardis Araque</span> <span class="card-text">Apoyo Académico</span>
-                </div>
 
-                <div class="team-over">
-                  <h4 class="hidden-md-down">
-                    Contactame
-                  </h4>
 
-                  <nav class="social-nav">
-                    <a href="#"><i class="bi bi-twitter"></i></a> <a href="#"><i class="bi bi-facebook"></i></a> <a
-                      href="#"><i class="bi bi-linkedin"></i></a> <a href="#"><i class="bi bi-envelope-fill"></i></a>
-                  </nav>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-sm-3 col-xs-6">
-            <div class="card card-block">
-              <a href="#"><img alt="" class="team-img" src="assets/img/team-2.jpg">
-                <div class="card-title-wrap">
-                  <span class="card-title">Manuel Caballero</span> <span class="card-text">Apoyo Académico</span>
-                </div>
-
-                <div class="team-over">
-                  <h4 class="hidden-md-down">
-                    Contactame
-                  </h4>
-
-                  <nav class="social-nav">
-                    <a href="#"><i class="bi bi-twitter"></i></a> <a href="#"><i class="bi bi-facebook"></i></a> <a
-                      href="#"><i class="bi bi-linkedin"></i></a> <a href="#"><i class="bi bi-envelope-fill"></i></a>
-                  </nav>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-sm-3 col-xs-6">
-            <div class="card card-block">
-              <a href="#"><img alt="" class="team-img" src="assets/img/team-3.jpg">
-                <div class="card-title-wrap">
-                  <span class="card-title">Bianca Morón</span> <span class="card-text">Apoyo Titulación</span>
-                </div>
-
-                <div class="team-over">
-                  <h4 class="hidden-md-down">
-                    Contactame
-                  </h4>
-
-                  <nav class="social-nav">
-                    <a href="#"><i class="bi bi-twitter"></i></a> <a href="#"><i class="bi bi-facebook"></i></a> <a
-                      href="#"><i class="bi bi-linkedin"></i></a> <a href="#"><i class="bi bi-envelope-fill"></i></a>
-                  </nav>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section><!-- End Team Section -->
 
     <!-- ======= Call to Action Section ======= -->
-    <section class="cta">
+    <section class="cta" style="background-color: #00BFFF">
       <div class="container">
-        <div class="row">
+        <div class="row" >
           <div class="col-lg-9 col-sm-12 text-lg-start text-center">
             <h2>
-              Carrera de Ingenieria Industrial
+              BUCODENT CENTRO ODONTOLOGICO INTEGRAL
             </h2>
 
             <p>
-              La resolución I.C.U. Nro.030/2010 reconoce como fecha de creación de la carrera el 24 de julio del 1973.
-              La Carrera de Ingeniería industrial esta al servicio del desarrollo socio económico local y nacional
-              formando profesionales con un perfil integral como líder de equipos interdisciplinarios, capaz de crear,
-              planificar, establecer y administrar sistemas productivos y de servicios buscando de manera creativa
-              soluciones a los problemas del medio.
+              La clinica BUCODENT estamos especializados en diferentes servicios odontológicos. El objetivo de nuestra clínica dental es
+              ofrecer un óptimo tratamiento para mejorar la salud de nuestros clientes en Santa Cruz de la Sierra. Nuestro equipo de
+              profesionales se encargará de proporcionarle un servicio de calidad con las mejores técnicas de odontología, para adultos y niños.
             </p>
           </div>
 
@@ -428,136 +355,57 @@
     <!-- ======= Features Section ======= -->
     <section class="features" id="features">
       <div class="container">
-        <h2 class="text-center">
-          Misión y Visión de la Carrera de Ingenieria Industrial
+        <h2 class="text-center" style="color: #00BFFF;" >
+          Misión y Visión de la Clinica Dental Bucodent
         </h2>
-        <div class="row">
-          <div class="feature-col col-lg-4 col-xs-12">
-            <div class="card card-block text-center">
-              <div>
-                <div class="feature-icon">
-                  <i class="bi bi-briefcase"></i>
-                </div>
-              </div>
 
-              <div>
-                <h3>
-                  Formación
-                </h3>
 
-                <p>
-                  Formar Ingenieros industriales competentes, críticos, emprendedores, con valores éticos, morales y
-                  sobre todo entusiastas en el mundo industrial.
-                </p>
-              </div>
-            </div>
-          </div>
 
-          <div class="feature-col col-lg-4 col-xs-12">
-            <div class="card card-block text-center">
-              <div>
-                <div class="feature-icon">
-                  <i class="bi bi-card-checklist"></i>
-                </div>
-              </div>
-
-              <div>
-                <h3>
-                  Educación
-                </h3>
-
-                <p>
-                  Ingenieros capaces de aplicar los conocimientos científicos y tecnológicos en la innovación y solución
-                  de los problemas relacionados con los sistemas de producción de bienes y servicios.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="feature-col col-lg-4 col-xs-12">
-            <div class="card card-block text-center">
-              <div>
-                <div class="feature-icon">
-                  <i class="bi bi-bar-chart"></i>
-                </div>
-              </div>
-
-              <div>
-                <h3>
-                  Compromiso
-                </h3>
-
-                <p>
-                  comprometidos con el medio ambiente, la investigación e interacción social, y la mejora continua, para
-                  contribuir al desarrollo del país y la región.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div class="row">
-          <div class="feature-col col-lg-4 col-xs-12">
+          <div class="feature-col col-lg-6 col-xs-12">
             <div class="card card-block text-center">
               <div>
-                <div class="feature-icon">
-                  <i class="bi bi-binoculars"></i>
-                </div>
-              </div>
-
-              <div>
-                <h3>
-                  Desarrollo
-                </h3>
-
-                <p>
-                  Ser reconocida como una carrera líder en la formación de ingenieros industriales por su excelencia
-                  académica, donde se generen conocimientos que aporten al desarrollo.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="feature-col col-lg-4 col-xs-12">
-            <div class="card card-block text-center">
-              <div>
-                <div class="feature-icon">
+                <div class="feature-icon" style="background-color: #00BFFF">
                   <i class="bi bi-brightness-high"></i>
                 </div>
               </div>
 
               <div>
-                <h3>
-                  Aportes
+                <h3 style="color: #00BFFF">
+                 Mision
                 </h3>
 
-                <p>
-                  Capacidad de emprender y apoyar procesos de emprendimiento, pues poseen conocimiento para diseñar,
-                  planear y operar planes de negocio que contribuyan a la generación de empleo.
-                </p>
+                <h4>
+                Garantizar la buena atención a nuestros pacientes, brindándoles una asistencia odontológica integral,
+                mediante una atención personalizada para asegurar la solución de cualquier problema relacionado con la salud oral.
+                </h4>
               </div>
             </div>
           </div>
 
-          <div class="feature-col col-lg-4 col-xs-12">
+          <div class="feature-col col-lg-6 col-xs-12">
             <div class="card card-block text-center">
               <div>
-                <div class="feature-icon">
-                  <i class="bi bi-calendar4-week"></i>
+                <div class="feature-icon" style="background-color: #00BFFF">
+                  <i class="bi bi-brightness-high"></i>
                 </div>
               </div>
 
               <div>
-                <h3>
-                  Actualidad
+                <h3 style="color: #00BFFF">
+                  Vision
                 </h3>
-                <p>
-                  adaptabilidad a las nuevas tendencias conforme a las exigencias y necesidades de sostenibilidad, que
-                  estudia científicamente los problemas y propone permanentemente soluciones de manera integral.
-                </p>
+
+                <h4>
+                Planificamos el presente y proyectamos el futuro a la par de la ciencia y la tecnología brindando a
+                nuestros pacientes un servicio personalizado.
+                </h4>
               </div>
             </div>
           </div>
+
+
         </div>
       </div>
     </section><!-- End Features Section -->
@@ -565,32 +413,32 @@
   </main><!-- End #main -->
   <!-- ======= Footer ======= -->
   <footer class="site-footer">
-    <div class="bottom">
+    <div class="bottom" style="background-color: #00BFFF">
       <div class="container">
         <div class="row">
 
           <div class="col-lg-6 col-xs-12 text-lg-start text-center">
             <p class="copyright-text">
-              &copy;<strong>Industrial</strong>. Derechos Reservados
+              &copy;<strong>BUCODENT</strong>. Derechos Reservados
             </p>
           </div>
 
           <div class="col-lg-6 col-xs-12 text-lg-right text-center">
             <ul class="list-inline">
               <li class="list-inline-item">
-                <a target="_blank" href="https://www.facebook.com/ingindustrialuagrm">Consultas</a>
+                <a target="_blank" href="https://www.facebook.com/Odontologia.Integral.Bucodent">Consultas</a>
               </li>
 
               <li class="list-inline-item">
-                <a target="_blank" href="https://www.uagrm.edu.bo/carreras/fcet-cii">Información</a>
+                <a target="_blank" href="https://www.facebook.com/Odontologia.Integral.Bucodent">Información</a>
               </li>
 
               <li class="list-inline-item">
-                <a target="_blank" href="https://www.facebook.com/ingindustrialuagrm">Nosotros</a>
+                <a target="_blank" href="https://www.facebook.com/Odontologia.Integral.Bucodent">Nosotros</a>
               </li>
 
               <li class="list-inline-item">
-                <a target="_blank" href="https://www.uagrm.edu.bo/carreras/fcet-cii">Contáctanos</a>
+                <a target="_blank" href="https://www.facebook.com/Odontologia.Integral.Bucodent">Contáctanos</a>
               </li>
             </ul>
           </div>
