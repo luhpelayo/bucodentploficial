@@ -18,7 +18,6 @@ class CreateServiciosTable extends Migration
             $table->string('nombre',255);
             $table->string('descripcion',255);
             $table->decimal('precio',11, 2);
-            $table->boolean('condicion')->default(1);
             $table->timestamps();
         });
     }

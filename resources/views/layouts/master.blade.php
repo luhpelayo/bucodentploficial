@@ -63,6 +63,23 @@
               @can('std.index')
               <li><a href="{{ route('std.index')}}">Estudiantes</a></li>
               @endcan
+              @can('dient.index')
+              <li><a href="{{ route('dient.index')}}">Dientes</a></li>
+              @endcan
+
+              @can('parte.index')
+              <li><a href="{{ route('parte.index')}}">Partes</a></li>
+              @endcan
+
+              @can('tratamiento.index')
+              <li><a href="{{ route('tratamiento.index')}}">Tratamientos</a></li>
+              @endcan
+
+              @can('odontograma.index')
+              <li><a href="{{ route('odontograma.index')}}">Odontogramas</a></li>
+              @endcan
+
+
               @can('grad.index')
               <li><a href="{{ route('grad.index')}}">Titulados</a></li>
               @endcan

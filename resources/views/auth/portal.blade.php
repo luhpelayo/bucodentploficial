@@ -23,6 +23,78 @@
                 </div>
             </div>
             @endcan
+
+          
+            @can('dient.index')
+            <div class="col-md-4">
+                <div>
+                    <a href="{{ route ('dient.index')}}">
+                        <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <h2 style="color: maroon;">Dientes</h2>
+                        <p style="text-align: left;">
+                            <span class="fa fa-info-circle"></span>
+                            Usted podra registrar toda la informacion necesaria de un diente, dicha informacion sera
+                            utilizada en otros procesos.
+                        </p>
+                        <a href="{{ route ('dient.index')}}" class="btn btn-success" title="Ir">Ingresar</a>
+                    </a>
+                </div>
+            </div>
+            @endcan
+
+
+            @can('parte.index')
+            <div class="col-md-4">
+                <div>
+                    <a href="{{ route ('parte.index')}}">
+                        <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <h2 style="color: maroon;">Partes</h2>
+                        <p style="text-align: left;">
+                            <span class="fa fa-info-circle"></span>
+                            Usted podra registrar toda la informacion necesaria de un partes, dicha informacion sera
+                            utilizada en otros procesos.
+                        </p>
+                        <a href="{{ route ('parte.index')}}" class="btn btn-success" title="Ir">Ingresar</a>
+                    </a>
+                </div>
+            </div>
+            @endcan
+
+
+            @can('tratamiento.index')
+            <div class="col-md-4">
+                <div>
+                    <a href="{{ route ('tratamiento.index')}}">
+                        <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <h2 style="color: maroon;">tratamientos</h2>
+                        <p style="text-align: left;">
+                            <span class="fa fa-info-circle"></span>
+                            Usted podra registrar toda la informacion necesaria de un tratamientos, dicha informacion sera
+                            utilizada en otros procesos.
+                        </p>
+                        <a href="{{ route ('tratamiento.index')}}" class="btn btn-success" title="Ir">Ingresar</a>
+                    </a>
+                </div>
+            </div>
+            @endcan
+
+
+            @can('odontograma.index')
+            <div class="col-md-4">
+                <div>
+                    <a href="{{ route ('odontograma.index')}}">
+                        <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <h2 style="color: maroon;">Odontogramas</h2>
+                        <p style="text-align: left;">
+                            <span class="fa fa-info-circle"></span>
+                            Usted podra registrar toda la informacion necesaria de un odontogramas, dicha informacion sera
+                            utilizada en otros procesos.
+                        </p>
+                        <a href="{{ route ('odontograma.index')}}" class="btn btn-success" title="Ir">Ingresar</a>
+                    </a>
+                </div>
+            </div>
+            @endcan
             @can('grad.index')
             <div class="col-md-4">
                 <div>
