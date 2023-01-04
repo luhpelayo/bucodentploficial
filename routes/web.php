@@ -36,14 +36,12 @@ use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\DienteController;
 use App\Http\Controllers\ParteController;
 use App\Http\Controllers\TratamientoController;
-<<<<<<< HEAD
 
 
 use App\Http\Controllers\PacienteController;
 use App\Http\Controllers\OdontologoController;
 use App\Http\Controllers\ServicioController;
-=======
->>>>>>> 428a1646c36b84327111dbf2705593b36f99557f
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -95,7 +93,7 @@ Route::get('/portal/odontogramas', function(){
     return view('odontograma.principal');
 })->name('odontograma.index');
 
-<<<<<<< HEAD
+
  //modulo paciente
  Route::get('/portal/pacientes', function(){
     return view('paciente.principal');
@@ -110,8 +108,8 @@ Route::get('/portal/odontologos', function(){
 Route::get('/portal/servicios', function(){
     return view('servicio.principal');
 })->name('servicio.index');
-=======
->>>>>>> 428a1646c36b84327111dbf2705593b36f99557f
+
+
 
     //modulo egresados
     Route::get('/portal/graduates', function(){
@@ -355,16 +353,15 @@ Route::put('/portal/updtratamiento/{id}', [TratamientoController::class, 'update
 Route::delete('/portal/deltratamiento/{id}', [TratamientoController::class, 'destroy'])->name('tratamiento.destroy');
 Route::get('/portal/tratamientos/pdf-tratamientos', [TratamientoController::class, 'allpdf'])->name('tratamiento.pdf');
 Route::get('/portal/tratamientos/excel-tratamientos', [TratamientoController::class, 'allexcel'])->name('tratamiento.excel');
-<<<<<<< HEAD
+
 //ruta de reportes de tratamiento
-=======
-//ruta de reportes de dientes
->>>>>>> 428a1646c36b84327111dbf2705593b36f99557f
+
+
 Route::get('/portal/reports/dynamic/tratamiento', [TratamientoController::class, 'report'])->name('tratamiento.report');
 Route::post('/portal/query-tratamiento', [TratamientoController::class, 'query'])->name('tratamiento.query');
 
 
-<<<<<<< HEAD
+
     //rutas de pacientes
     Route::get('/portal/pacientes/add-paciente', [PacienteController::class, 'create'])->name('paciente.create');
     Route::post('/portal/add-paciente', [PacienteController::class, 'store'])->name('paciente.store');
@@ -403,9 +400,6 @@ Route::post('/portal/query-tratamiento', [TratamientoController::class, 'query']
     //ruta de reportes de servicios
     Route::get('/portal/reports/dynamic/servicio', [ServicioController::class, 'report'])->name('servicio.report');
     Route::post('/portal/query-servicio', [ServicioController::class, 'query'])->name('servicio.query');
-
-=======
->>>>>>> 428a1646c36b84327111dbf2705593b36f99557f
 
     //rutas de categorias
     Route::get('/portal/graduates/categories/add-category', [CategoryController::class, 'create'])->name('category.create');
