@@ -33,6 +33,14 @@ use App\Http\Controllers\AssistanceController;
 use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\CertificateController;
 
+use App\Http\Controllers\DienteController;
+use App\Http\Controllers\ParteController;
+use App\Http\Controllers\TratamientoController;
+
+
+use App\Http\Controllers\PacienteController;
+use App\Http\Controllers\OdontologoController;
+use App\Http\Controllers\ServicioController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -63,6 +71,41 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/portal/students', function(){
         return view('student.principal');
     })->name('std.index');
+
+ //modulo diente
+ Route::get('/portal/dientes', function(){
+    return view('diente.principal');
+})->name('dient.index');
+
+ //modulo parte
+ Route::get('/portal/partes', function(){
+    return view('parte.principal');
+})->name('parte.index');
+
+//modulo tratamiento
+Route::get('/portal/tratamientos', function(){
+    return view('tratamiento.principal');
+})->name('tratamiento.index');
+
+//modulo odontograma
+Route::get('/portal/odontogramas', function(){
+    return view('odontograma.principal');
+})->name('odontograma.index');
+
+ //modulo paciente
+ Route::get('/portal/pacientes', function(){
+    return view('paciente.principal');
+})->name('paciente.index');
+
+//modulo odontologo
+Route::get('/portal/odontologos', function(){
+    return view('odontologo.principal');
+})->name('odontologo.index');
+
+//modulo servicios
+Route::get('/portal/servicios', function(){
+    return view('servicio.principal');
+})->name('servicio.index');
 
     //modulo egresados
     Route::get('/portal/graduates', function(){
@@ -268,6 +311,88 @@ Route::middleware(['auth'])->group(function () {
     //ruta de reportes de estudiantes
     Route::get('/portal/reports/dynamic/student', [StudentController::class, 'report'])->name('student.report');
     Route::post('/portal/query-student', [StudentController::class, 'query'])->name('student.query');
+
+ //rutas de dientes
+ Route::get('/portal/dientes/add-diente', [DienteController::class, 'create'])->name('diente.create');
+ Route::post('/portal/add-diente', [DienteController::class, 'store'])->name('diente.store');
+ Route::get('/portal/dientes/show-dientes', [DienteController::class, 'show'])->name('diente.show');
+ Route::get('/portal/editar/{id}/diente', [DienteController::class, 'edit'])->name('diente.edit');
+ Route::put('/portal/upddiente/{id}', [DienteController::class, 'update'])->name('diente.update');
+ Route::delete('/portal/deldiente/{id}', [DienteController::class, 'destroy'])->name('diente.destroy');
+ Route::get('/portal/dientes/pdf-dientes', [DienteController::class, 'allpdf'])->name('diente.pdf');
+ Route::get('/portal/dientes/excel-dientes', [DienteController::class, 'allexcel'])->name('diente.excel');
+ //ruta de reportes de dientes
+ Route::get('/portal/reports/dynamic/diente', [DienteController::class, 'report'])->name('diente.report');
+ Route::post('/portal/query-diente', [DienteController::class, 'query'])->name('diente.query');
+
+    
+
+  //rutas de partes
+  Route::get('/portal/partes/add-parte', [ParteController::class, 'create'])->name('parte.create');
+  Route::post('/portal/add-parte', [ParteController::class, 'store'])->name('parte.store');
+  Route::get('/portal/partes/show-partes', [ParteController::class, 'show'])->name('parte.show');
+  Route::get('/portal/editar/{id}/parte', [ParteController::class, 'edit'])->name('parte.edit');
+  Route::put('/portal/updparte/{id}', [ParteController::class, 'update'])->name('parte.update');
+  Route::delete('/portal/delparte/{id}', [ParteController::class, 'destroy'])->name('parte.destroy');
+  Route::get('/portal/partes/pdf-partes', [ParteController::class, 'allpdf'])->name('parte.pdf');
+  Route::get('/portal/partes/excel-partes', [ParteController::class, 'allexcel'])->name('parte.excel');
+  //ruta de reportes de dientes
+  Route::get('/portal/reports/dynamic/parte', [ParteController::class, 'report'])->name('parte.report');
+  Route::post('/portal/query-parte', [ParteController::class, 'query'])->name('parte.query');
+ 
+//rutas de Tratamientos
+Route::get('/portal/tratamientos/add-tratamiento', [TratamientoController::class, 'create'])->name('tratamiento.create');
+Route::post('/portal/add-tratamiento', [TratamientoController::class, 'store'])->name('tratamiento.store');
+Route::get('/portal/tratamientos/show-tratamientos', [TratamientoController::class, 'show'])->name('tratamiento.show');
+Route::get('/portal/editar/{id}/tratamiento', [TratamientoController::class, 'edit'])->name('tratamiento.edit');
+Route::put('/portal/updtratamiento/{id}', [TratamientoController::class, 'update'])->name('tratamiento.update');
+Route::delete('/portal/deltratamiento/{id}', [TratamientoController::class, 'destroy'])->name('tratamiento.destroy');
+Route::get('/portal/tratamientos/pdf-tratamientos', [TratamientoController::class, 'allpdf'])->name('tratamiento.pdf');
+Route::get('/portal/tratamientos/excel-tratamientos', [TratamientoController::class, 'allexcel'])->name('tratamiento.excel');
+//ruta de reportes de tratamiento
+Route::get('/portal/reports/dynamic/tratamiento', [TratamientoController::class, 'report'])->name('tratamiento.report');
+Route::post('/portal/query-tratamiento', [TratamientoController::class, 'query'])->name('tratamiento.query');
+
+
+    //rutas de pacientes
+    Route::get('/portal/pacientes/add-paciente', [PacienteController::class, 'create'])->name('paciente.create');
+    Route::post('/portal/add-paciente', [PacienteController::class, 'store'])->name('paciente.store');
+    Route::get('/portal/pacientes/show-pacientes', [PacienteController::class, 'show'])->name('paciente.show');
+    Route::get('/portal/editar/{id}/paciente', [PacienteController::class, 'edit'])->name('paciente.edit');
+    Route::put('/portal/updpaciente/{id}', [PacienteController::class, 'update'])->name('paciente.update');
+    Route::delete('/portal/delpaciente/{id}', [PacienteController::class, 'destroy'])->name('paciente.destroy');
+    Route::get('/portal/pacientes/pdf-pacientes', [PacienteController::class, 'allpdf'])->name('paciente.pdf');
+    Route::get('/portal/pacientes/excel-pacientes', [PacienteController::class, 'allexcel'])->name('paciente.excel');
+    //ruta de reportes de pacientes
+    Route::get('/portal/reports/dynamic/paciente', [PacienteController::class, 'report'])->name('paciente.report');
+    Route::post('/portal/query-paciente', [PacienteController::class, 'query'])->name('paciente.query');
+
+    //rutas de odontologos
+    Route::get('/portal/odontologos/add-odontologo', [OdontologoController::class, 'create'])->name('odontologo.create');
+    Route::post('/portal/add-odontologo', [OdontologoController::class, 'store'])->name('odontologo.store');
+    Route::get('/portal/odontologos/show-odontologos', [OdontologoController::class, 'show'])->name('odontologo.show');
+    Route::get('/portal/editar/{id}/odontologo', [OdontologoController::class, 'edit'])->name('odontologo.edit');
+    Route::put('/portal/updodontologo/{id}', [OdontologoController::class, 'update'])->name('odontologo.update');
+    Route::delete('/portal/delodontologo/{id}', [OdontologoController::class, 'destroy'])->name('odontologo.destroy');
+    Route::get('/portal/odontologos/pdf-odontologos', [OdontologoController::class, 'allpdf'])->name('odontologo.pdf');
+    Route::get('/portal/odontologos/excel-odontologos', [OdontologoController::class, 'allexcel'])->name('odontologo.excel');
+    //ruta de reportes de odontologos
+    Route::get('/portal/reports/dynamic/odontologo', [OdontologoController::class, 'report'])->name('odontologo.report');
+    Route::post('/portal/query-odontologo', [OdontologoController::class, 'query'])->name('odontologo.query');
+
+    //rutas de servicios
+    Route::get('/portal/servicios/add-servicio', [ServicioController::class, 'create'])->name('servicio.create');
+    Route::post('/portal/add-servicio', [ServicioController::class, 'store'])->name('servicio.store');
+    Route::get('/portal/servicios/show-servicios', [ServicioController::class, 'show'])->name('servicio.show');
+    Route::get('/portal/editar/{id}/servicio', [ServicioController::class, 'edit'])->name('servicio.edit');
+    Route::put('/portal/updservicio/{id}', [ServicioController::class, 'update'])->name('servicio.update');
+    Route::delete('/portal/delservicio/{id}', [ServicioController::class, 'destroy'])->name('servicio.destroy');
+    Route::get('/portal/servicios/pdf-servicios', [ServicioController::class, 'allpdf'])->name('servicio.pdf');
+    Route::get('/portal/servicios/excel-servicios', [ServicioController::class, 'allexcel'])->name('servicio.excel');
+    //ruta de reportes de servicios
+    Route::get('/portal/reports/dynamic/servicio', [ServicioController::class, 'report'])->name('servicio.report');
+    Route::post('/portal/query-servicio', [ServicioController::class, 'query'])->name('servicio.query');
+
 
     //rutas de categorias
     Route::get('/portal/graduates/categories/add-category', [CategoryController::class, 'create'])->name('category.create');

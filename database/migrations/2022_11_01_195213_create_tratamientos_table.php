@@ -18,7 +18,6 @@ class CreateTratamientosTable extends Migration
             $table->string('nombre',255);
             $table->string('color',255);
             $table->integer('precio');
-            $table->boolean('condicion')->default(1);
             $table->timestamps();
         });
     }

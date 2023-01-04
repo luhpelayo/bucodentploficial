@@ -57,37 +57,47 @@
         <ul>
           <li><a class="nav-link scrollto"><b> Hola {{ auth()->user()->name }}, Rol {{ auth()->user()->rol }} </b></a>
           </li>
-          <li class="dropdown"><a href="#"><span>Módulos:</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Módulo Odontograma:</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="{{ route('portal.index')}}">Inicio</a></li>
               @can('std.index')
               <li><a href="{{ route('std.index')}}">Estudiantes</a></li>
               @endcan
-              @can('grad.index')
-              <li><a href="{{ route('grad.index')}}">Titulados</a></li>
+              @can('dient.index')
+              <li><a href="{{ route('dient.index')}}">Dientes</a></li>
               @endcan
-              @can('prac.index')
-              <li><a href="{{ route('prac.index')}}">Prácticas Ind</a></li>
+
+              @can('parte.index')
+              <li><a href="{{ route('parte.index')}}">Partes</a></li>
               @endcan
-              @can('lab.index')
-              <li><a href="{{ route('lab.index') }}">Laboratorios</a></li>
+
+              @can('tratamiento.index')
+              <li><a href="{{ route('tratamiento.index')}}">Tratamientos</a></li>
               @endcan
-              @can('visit.index')
-              <li><a href="{{ route('visit.index') }}">Vísitas Tec</a></li>
+
+              @can('odontograma.index')
+              <li><a href="{{ route('odontograma.index')}}">Odontogramas</a></li>
               @endcan
-              @can('doc.index')
-              <li><a href="{{ route('doc.index') }}">Documentos</a></li>
-              @endcan
-              @can('agre.index')
-              <li><a href="{{ route('agre.index') }}">Convenios</a></li>
-              @endcan
-              @can('track.index')
-              <li><a href="{{ route('track.index') }}">Seguimientos</a></li>
-              @endcan
-              @can('tra.index')
-              <li><a href="{{ route('tra.index') }}">Cursos</a></li>
-              @endcan
+
+
+      
               <li><a href="{{ route('report.index') }}">Reportes</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Módulo Consulta:</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{{ route('portal.index')}}">Inicio</a></li>
+              @can('paciente.index')
+              <li><a href="{{ route('paciente.index')}}">Pacientes</a></li>
+              @endcan
+              @can('odontologo.index')
+              <li><a href="{{ route('odontologo.index')}}">Odontologos</a></li>
+              @endcan
+              @can('servicio.index')
+              <li><a href="{{ route('servicio.index')}}">Servicios</a></li>
+              @endcan
+          
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Opciones</span> <i class="bi bi-chevron-down"></i></a>

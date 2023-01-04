@@ -7,18 +7,124 @@
     </div>
     <div class="container">
         <div class="row style_featured">
-            @can('std.index')
+        @can('paciente.index')
             <div class="col-md-4">
                 <div>
-                    <a href="{{ route ('std.index')}}">
+                    <a href="{{ route ('paciente.index')}}">
                         <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Estudiantes</h2>
+                        <h2 style="color: maroon;">Pacientes</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
-                            Usted podra registrar toda la informacion necesaria de un estudiante, dicha informacion sera
+                            Usted podra registrar toda la informacion necesaria de un paciente, dicha informacion sera
                             utilizada en otros procesos.
                         </p>
-                        <a href="{{ route ('std.index')}}" class="btn btn-success" title="Ir">Ingresar</a>
+                        <a href="{{ route ('paciente.index')}}" class="btn btn-success" title="Ir">Ingresar</a>
+                    </a>
+                </div>
+            </div>
+            @endcan
+          
+          
+            @can('odontologo.index')
+            <div class="col-md-4">
+                <div>
+                    <a href="{{ route ('odontologo.index')}}">
+                        <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <h2 style="color: maroon;">Odontologos</h2>
+                        <p style="text-align: left;">
+                            <span class="fa fa-info-circle"></span>
+                            Aqui se puede almacenar los documentos de respaldo (fotos e informes) de las visitas de los
+                            odontologos.
+                        </p>
+                        <a href="{{ route ('odontologo.index')}}" class="btn btn-success" title="More">Ingresar</a>
+                    </a>
+                </div>
+            </div>
+            @endcan
+            @can('servicio.index')
+            <div class="col-md-4">
+                <div>
+                    <a href="{{ route ('servicio.index')}}">
+                        <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <h2 style="color: maroon;">Servicios</h2>
+                        <p style="text-align: left;">
+                            <span class="fa fa-info-circle"></span>
+                            Aqui se puede almacenar los documentos de respaldo (fotos e informes) de las visitas de los
+                            servicios.
+                        </p>
+                        <a href="{{ route ('servicio.index')}}" class="btn btn-success" title="More">Ingresar</a>
+                    </a>
+                </div>
+            </div>
+            @endcan
+
+          
+            @can('dient.index')
+            <div class="col-md-4">
+                <div>
+                    <a href="{{ route ('dient.index')}}">
+                        <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <h2 style="color: maroon;">Dientes</h2>
+                        <p style="text-align: left;">
+                            <span class="fa fa-info-circle"></span>
+                            Usted podra registrar toda la informacion necesaria de un diente, dicha informacion sera
+                            utilizada en otros procesos.
+                        </p>
+                        <a href="{{ route ('dient.index')}}" class="btn btn-success" title="Ir">Ingresar</a>
+                    </a>
+                </div>
+            </div>
+            @endcan
+
+
+            @can('parte.index')
+            <div class="col-md-4">
+                <div>
+                    <a href="{{ route ('parte.index')}}">
+                        <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <h2 style="color: maroon;">Partes</h2>
+                        <p style="text-align: left;">
+                            <span class="fa fa-info-circle"></span>
+                            Usted podra registrar toda la informacion necesaria de un partes, dicha informacion sera
+                            utilizada en otros procesos.
+                        </p>
+                        <a href="{{ route ('parte.index')}}" class="btn btn-success" title="Ir">Ingresar</a>
+                    </a>
+                </div>
+            </div>
+            @endcan
+
+
+            @can('tratamiento.index')
+            <div class="col-md-4">
+                <div>
+                    <a href="{{ route ('tratamiento.index')}}">
+                        <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <h2 style="color: maroon;">tratamientos</h2>
+                        <p style="text-align: left;">
+                            <span class="fa fa-info-circle"></span>
+                            Usted podra registrar toda la informacion necesaria de un tratamientos, dicha informacion sera
+                            utilizada en otros procesos.
+                        </p>
+                        <a href="{{ route ('tratamiento.index')}}" class="btn btn-success" title="Ir">Ingresar</a>
+                    </a>
+                </div>
+            </div>
+            @endcan
+
+
+            @can('odontograma.index')
+            <div class="col-md-4">
+                <div>
+                    <a href="{{ route ('odontograma.index')}}">
+                        <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <h2 style="color: maroon;">Odontogramas</h2>
+                        <p style="text-align: left;">
+                            <span class="fa fa-info-circle"></span>
+                            Usted podra registrar toda la informacion necesaria de un odontogramas, dicha informacion sera
+                            utilizada en otros procesos.
+                        </p>
+                        <a href="{{ route ('odontograma.index')}}" class="btn btn-success" title="Ir">Ingresar</a>
                     </a>
                 </div>
             </div>

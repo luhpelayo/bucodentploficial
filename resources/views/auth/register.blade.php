@@ -70,12 +70,8 @@
               <label for="rol">Rol:</label>
                 <select name="rol" id="rol">
                   <option value="Admin">Admin</option>
-                <option value="Director">Director</option>
-                <option value="Acreditacion">Acreditación</option>
-                <option value="Extension">Extensión</option>
-                <option value="Academico">Académico</option>
-                <option value="Titulacion">Titulación</option>
-                <option value="Laboratorio">Laboratorio</option>
+                <option value="Secretaria">Secretaria</option>
+                <option value="Doctor">Doctor</option>
                 </select>
                 <br>
                 <br>
