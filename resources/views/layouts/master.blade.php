@@ -60,7 +60,9 @@
           <li class="dropdown"><a href="#"><span>Módulo Odontograma:</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="{{ route('portal.index')}}">Inicio</a></li>
-
+              @can('dient.index')
+              <li><a href="{{ route('dient.index')}}">Dientes</a></li>
+              @endcan
               @can('parte.index')
               <li><a href="{{ route('parte.index')}}">Partes</a></li>
               @endcan
