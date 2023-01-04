@@ -12,7 +12,6 @@
                 <div>
                     <a href="{{ route ('paciente.index')}}">
                         <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
-<<<<<<< HEAD
                         <h2 style="color: maroon;">Pacientes</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
@@ -60,6 +59,7 @@
             @endcan
 
           
+
             @can('dient.index')
             <div class="col-md-4">
                 <div>
@@ -88,51 +88,7 @@
                             <span class="fa fa-info-circle"></span>
                             Usted podra registrar toda la informacion necesaria de un partes, dicha informacion sera
                             utilizada en otros procesos.
-                        </p>
-=======
-                        <h2 style="color: maroon;">Estudiantes</h2>
-                        <p style="color: #00BFFF; text-align: left;" >
-                            <span class="fa fa-info-circle" ></span>
-                            Usted podra registrar toda la informacion necesaria de un estudiante, dicha informacion sera
-                            utilizada en otros procesos.
-                        </p>
-                        <a href="{{ route ('std.index')}}" class="btn btn-success" title="Ir" >Ingresar</a>
-                    </a>
-                </div>
-            </div>
-            @endcan
-
-          
-            @can('dient.index')
-            <div class="col-md-4">
-                <div>
-                    <a href="{{ route ('dient.index')}}">
-                        <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Dientes</h2>
-                        <p style="text-align: left;">
-                            <span class="fa fa-info-circle"></span>
-                            Usted podra registrar toda la informacion necesaria de un diente, dicha informacion sera
-                            utilizada en otros procesos.
-                        </p>
-                        <a href="{{ route ('dient.index')}}" class="btn btn-success" title="Ir">Ingresar</a>
-                    </a>
-                </div>
-            </div>
-            @endcan
-
-
-            @can('parte.index')
-            <div class="col-md-4">
-                <div>
-                    <a href="{{ route ('parte.index')}}">
-                        <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Partes</h2>
-                        <p style="text-align: left;">
-                            <span class="fa fa-info-circle"></span>
-                            Usted podra registrar toda la informacion necesaria de un partes, dicha informacion sera
-                            utilizada en otros procesos.
-                        </p>
->>>>>>> 428a1646c36b84327111dbf2705593b36f99557f
+                       </p>
                         <a href="{{ route ('parte.index')}}" class="btn btn-success" title="Ir">Ingresar</a>
                     </a>
                 </div>
