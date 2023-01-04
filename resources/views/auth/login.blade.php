@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 order-md-2">
-          <img src="images/LogoLogin.png" alt="Image">
+          <img src="assets/img/Logologin.png" alt="Image">
         </div>
         <div class="col-md-6 contents">
           <div class="row justify-content-center">
@@ -24,18 +24,18 @@
                 <input type="password" class="form-control" id="password" name="password" required>
               </div>
               <div class="d-flex mb-5 align-items-center">
-                <span class="ml-auto"><a target="_blank" href="https://wa.me/+59171308634?text=Me%20gustaria%20cambiar%20mi%20password%20del%20portal%20de%20Ing%20Industrial" class="forgot-pass">Olvidaste tu Contraseña?</a></span> 
+                <span class="ml-auto"><a target="_blank" href="https://wa.me/+59171308634?text=Me%20gustaria%20cambiar%20mi%20password%20del%20portal%20de%20Ing%20Industrial" class="forgot-pass">Olvidaste tu Contraseña?</a></span>
               </div>
               @error('message')
               <div style="text-align:center">
                 <span style="color: red">¡Datos Incorrectos, Intente de Nuevo!</span>
               </div>
               @enderror
-              <input type="submit" value="Iniciar" class="btn text-white btn-block btn-primary">
+              <input type="submit" value="Iniciar" class="btn text-white btn-block btn-primary" style="background-color: #00BFFF">
             </form>
             </div>
           </div>
-        </div> 
+        </div>
       </div>
     </div>
   </div>
