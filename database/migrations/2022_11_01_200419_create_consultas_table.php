@@ -26,8 +26,8 @@ class CreateConsultasTable extends Migration
             $table->integer('odontogramaid')->unsigned();
             $table->foreign('odontogramaid')->references('id')->on('odontogramas');
 
-            $table->integer('serviciosid')->unsigned();
-            $table->foreign('serviciosid')->references('id')->on('servicios');
+            $table->integer('servicioid')->unsigned();
+            $table->foreign('servicioid')->references('id')->on('servicios');
             $table->timestamps();
         });
     }

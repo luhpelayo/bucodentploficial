@@ -29,7 +29,7 @@ class DienteController extends Controller
             'estado' => ['required', 'digits:1'],
             
         ]);
-     
+        $diente = Diente::findOrFail($id);
         $diente->numerodiente = $request->numerodiente;
         $diente->nombre = $request->nombre;
         $diente->estado = $request->estado;

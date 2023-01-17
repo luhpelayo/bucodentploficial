@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Industrial</title>
-  <meta content="Sistema web de Ing Industrial" name="description">
-  <meta content="Uagrm, Ing industrial, FCET" name="keywords">
+  <title>Bucodent</title>
+  <meta content="Sistema web deBucodent" name="description">
+  <meta content="Bucodent" name="keywords">
   <meta content="Nells A. Vidal V." name="author">
 
   <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->

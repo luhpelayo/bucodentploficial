@@ -18,7 +18,7 @@
         <th>Numero de parte</th>
         <th>Nombre</th>
         <th>Estado</th>
-        
+        <th>OPCIONES</th>
       </tr>
     </thead>
     <tbody>

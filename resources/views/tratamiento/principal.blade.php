@@ -10,7 +10,7 @@
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('tratamiento.create')}}">
-                        <img src="{{URL::asset('icons/addstudent.png')}}" alt="imagen"
+                        <img src="{{URL::asset('icons/dientes.png')}}" alt="imagen"
                             class="img-rounded img-thumbnail" />
                         <h2 style="color: maroon;">Registrar tratamiento</h2>
                         <p style="text-align: left;">
@@ -27,9 +27,9 @@
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('tratamiento.show')}}">
-                        <img src="{{URL::asset('icons/viewstudent.png')}}" alt="imagen"
+                        <img src="{{URL::asset('icons/doc.png')}}" alt="imagen"
                             class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Mostrar partes</h2>
+                        <h2 style="color: maroon;">Mostrar tratamientos</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
                             Se visualiza toda la informacion de los tratamiento registrados ademas es posible editar,

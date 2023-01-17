@@ -19,6 +19,7 @@
         <th>Nombre</th>
         <th>Color</th>
         <th>Precio</th>
+        <th>OPCIONES</th>
       </tr>
     </thead>
     <tbody>

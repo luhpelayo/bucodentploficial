@@ -36,12 +36,20 @@ use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\DienteController;
 use App\Http\Controllers\ParteController;
 use App\Http\Controllers\TratamientoController;
+use App\Http\Controllers\OdontogramaController;
+use App\Http\Controllers\ConsultaController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\Role_has_permissionController;
 
 
 use App\Http\Controllers\PacienteController;
 use App\Http\Controllers\OdontologoController;
 use App\Http\Controllers\ServicioController;
-
+use App\Http\Controllers\FichaclinicaController;
+use App\Http\Controllers\ArchivoController;
+use App\Http\Controllers\ReciboController;
+use App\Http\Controllers\RecetaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -93,6 +101,25 @@ Route::get('/portal/odontogramas', function(){
     return view('odontograma.principal');
 })->name('odontograma.index');
 
+//modulo consulta
+Route::get('/portal/consultas', function(){
+    return view('consulta.principal');
+})->name('consulta.index');
+
+//modulo permission
+Route::get('/portal/permissions', function(){
+    return view('permission.principal');
+})->name('permission.index');
+
+//modulo role_has_permission
+Route::get('/portal/role_has_permissions', function(){
+    return view('role_has_permission.principal');
+})->name('role_has_permission.index');
+
+//modulo role
+Route::get('/portal/roles', function(){
+    return view('role.principal');
+})->name('role.index');
 
  //modulo paciente
  Route::get('/portal/pacientes', function(){
@@ -109,6 +136,25 @@ Route::get('/portal/servicios', function(){
     return view('servicio.principal');
 })->name('servicio.index');
 
+ //modulo archivos
+ Route::get('/portal/archivos', function(){
+    return view('archivo.principal');
+})->name('archivo.index');
+
+//modulo fichaclinica
+Route::get('/portal/fichaclinicas', function(){
+    return view('fichaclinica.principal');
+})->name('fichaclinica.index');
+
+//modulo recetas
+Route::get('/portal/recetas', function(){
+    return view('receta.principal');
+})->name('receta.index');
+
+//modulo fichaclinica
+Route::get('/portal/recibos', function(){
+    return view('recibo.principal');
+})->name('recibo.index');
 
 
     //modulo egresados
@@ -356,10 +402,77 @@ Route::get('/portal/tratamientos/excel-tratamientos', [TratamientoController::cl
 
 //ruta de reportes de tratamiento
 
-
 Route::get('/portal/reports/dynamic/tratamiento', [TratamientoController::class, 'report'])->name('tratamiento.report');
 Route::post('/portal/query-tratamiento', [TratamientoController::class, 'query'])->name('tratamiento.query');
 
+//rutas de Odontogramas
+Route::get('/portal/odontogramas/add-odontograma', [OdontogramaController::class, 'create'])->name('odontograma.create');
+Route::post('/portal/add-odontograma', [OdontogramaController::class, 'store'])->name('odontograma.store');
+Route::get('/portal/odontogramas/show-odontogramas', [OdontogramaController::class, 'show'])->name('odontograma.show');
+Route::get('/portal/editar/{id}/odontograma', [OdontogramaController::class, 'edit'])->name('odontograma.edit');
+Route::put('/portal/updodontograma/{id}', [OdontogramaController::class, 'update'])->name('odontograma.update');
+Route::delete('/portal/delodontograma/{id}', [OdontogramaController::class, 'destroy'])->name('odontograma.destroy');
+Route::get('/portal/odontogramas/pdf-odontogramas', [OdontogramaController::class, 'allpdf'])->name('odontograma.pdf');
+Route::get('/portal/odontogramas/excel-odontogramas', [OdontogramaController::class, 'allexcel'])->name('odontograma.excel');
+
+//ruta de reportes de odontogramas
+Route::get('/portal/reports/dynamic/odontograma', [OdontogramaController::class, 'report'])->name('odontograma.report');
+Route::post('/portal/query-odontograma', [OdontogramaController::class, 'query'])->name('odontograma.query');
+
+//rutas de Consultas
+Route::get('/portal/consultas/add-consulta', [ConsultaController::class, 'create'])->name('consulta.create');
+Route::post('/portal/add-consulta', [ConsultaController::class, 'store'])->name('consulta.store');
+Route::get('/portal/consultas/show-consultas', [ConsultaController::class, 'show'])->name('consulta.show');
+Route::get('/portal/editar/{id}/consulta', [ConsultaController::class, 'edit'])->name('consulta.edit');
+Route::put('/portal/updconsulta/{id}', [ConsultaController::class, 'update'])->name('consulta.update');
+Route::delete('/portal/delconsulta/{id}', [ConsultaController::class, 'destroy'])->name('consulta.destroy');
+Route::get('/portal/consultas/pdf-consultas', [ConsultaController::class, 'allpdf'])->name('consulta.pdf');
+Route::get('/portal/consultas/excel-consultas', [ConsultaController::class, 'allexcel'])->name('consulta.excel');
+
+//ruta de reportes de consultas
+Route::get('/portal/reports/dynamic/consulta', [ConsultaController::class, 'report'])->name('consulta.report');
+Route::post('/portal/query-consulta', [ConsultaController::class, 'query'])->name('consulta.query');
+
+  //rutas de roles
+  Route::get('/portal/roles/add-role', [RoleController::class, 'create'])->name('role.create');
+  Route::post('/portal/add-role', [RoleController::class, 'store'])->name('role.store');
+  Route::get('/portal/roles/show-roles', [RoleController::class, 'show'])->name('role.show');
+  Route::get('/portal/editar/{id}/role', [RoleController::class, 'edit'])->name('role.edit');
+  Route::put('/portal/updrole/{id}', [RoleController::class, 'update'])->name('role.update');
+  Route::delete('/portal/delrole/{id}', [RoleController::class, 'destroy'])->name('role.destroy');
+  Route::get('/portal/roles/pdf-roles', [RoleController::class, 'allpdf'])->name('role.pdf');
+  Route::get('/portal/roles/excel-roles', [RoleController::class, 'allexcel'])->name('role.excel');
+  //ruta de reportes de roles
+  Route::get('/portal/reports/dynamic/role', [RoleController::class, 'report'])->name('role.report');
+  Route::post('/portal/query-role', [RoleController::class, 'query'])->name('role.query');
+
+    //rutas de permissions
+    Route::get('/portal/permissions/add-permission', [PermissionController::class, 'create'])->name('permission.create');
+    Route::post('/portal/add-permission', [PermissionController::class, 'store'])->name('permission.store');
+    Route::get('/portal/permissions/show-permissions', [PermissionController::class, 'show'])->name('permission.show');
+    Route::get('/portal/editar/{id}/permission', [PermissionController::class, 'edit'])->name('permission.edit');
+    Route::put('/portal/updpermission/{id}', [PermissionController::class, 'update'])->name('permission.update');
+    Route::delete('/portal/delpermission/{id}', [PermissionController::class, 'destroy'])->name('permission.destroy');
+    Route::get('/portal/permissions/pdf-permissions', [PermissionController::class, 'allpdf'])->name('permission.pdf');
+    Route::get('/portal/permissions/excel-permissions', [PermissionController::class, 'allexcel'])->name('permission.excel');
+    //ruta de reportes de permissions
+    Route::get('/portal/reports/dynamic/permission', [PermissionController::class, 'report'])->name('permission.report');
+    Route::post('/portal/query-permission', [PermissionController::class, 'query'])->name('permission.query');
+
+
+//rutas de Role_has_permissions
+Route::get('/portal/role_has_permissions/add-role_has_permission', [Role_has_permissionController::class, 'create'])->name('role_has_permission.create');
+Route::post('/portal/add-role_has_permission', [Role_has_permissionController::class, 'store'])->name('role_has_permission.store');
+Route::get('/portal/role_has_permissions/show-role_has_permissions', [Role_has_permissionController::class, 'show'])->name('role_has_permission.show');
+Route::get('/portal/editar/{id}/role_has_permission', [Role_has_permissionController::class, 'edit'])->name('role_has_permission.edit');
+Route::put('/portal/updrole_has_permission/{id}', [Role_has_permissionController::class, 'update'])->name('role_has_permission.update');
+Route::delete('/portal/delrole_has_permission/{id}', [Role_has_permissionController::class, 'destroy'])->name('role_has_permission.destroy');
+Route::get('/portal/role_has_permissions/pdf-role_has_permissions', [Role_has_permissionController::class, 'allpdf'])->name('role_has_permission.pdf');
+Route::get('/portal/role_has_permissions/excel-role_has_permissions', [Role_has_permissionController::class, 'allexcel'])->name('role_has_permission.excel');
+
+//ruta de reportes de role_has_permissions
+Route::get('/portal/reports/dynamic/role_has_permission', [Role_has_permissionController::class, 'report'])->name('role_has_permission.report');
+Route::post('/portal/query-role_has_permission', [Role_has_permissionController::class, 'query'])->name('role_has_permission.query');
 
 
     //rutas de pacientes
@@ -400,6 +513,83 @@ Route::post('/portal/query-tratamiento', [TratamientoController::class, 'query']
     //ruta de reportes de servicios
     Route::get('/portal/reports/dynamic/servicio', [ServicioController::class, 'report'])->name('servicio.report');
     Route::post('/portal/query-servicio', [ServicioController::class, 'query'])->name('servicio.query');
+
+//rutas de archivos
+Route::get('/portal/archivos/add-archivo', [ArchivoController::class, 'create'])->name('archivo.create');
+Route::post('/portal/add-archivo', [ArchivoController::class, 'store'])->name('archivo.store');
+Route::get('/portal/archivos/show-archivos', [ArchivoController::class, 'show'])->name('archivo.show');
+Route::get('/portal/editar/{id}/archivo', [ArchivoController::class, 'edit'])->name('archivo.edit');
+Route::put('/portal/updarchivo/{id}', [ArchivoController::class, 'update'])->name('archivo.update');
+Route::delete('/portal/delarchivo/{id}', [ArchivoController::class, 'destroy'])->name('archivo.destroy');
+Route::get('/portal/archivos/pdf-archivos', [ArchivoController::class, 'allpdf'])->name('archivo.pdf');
+Route::get('/portal/archivos/excel-archivos', [ArchivoController::class, 'allexcel'])->name('archivo.excel');
+//ruta de reportes de archivos
+Route::get('/portal/reports/dynamic/archivo', [ArchivoController::class, 'report'])->name('archivo.report');
+Route::post('/portal/query-archivo', [ArchivoController::class, 'query'])->name('archivo.query');
+
+
+//rutas de fichaclinica
+Route::get('/portal/fichaclinicas/add-fichaclinica', [FichaclinicaController::class, 'create'])->name('fichaclinica.create');
+Route::post('/portal/add-fichaclinica', [FichaclinicaController::class, 'store'])->name('fichaclinica.store');
+Route::get('/portal/fichaclinicas/show-fichaclinicas', [FichaclinicaController::class, 'show'])->name('fichaclinica.show');
+Route::get('/portal/editar/{id}/fichaclinica', [FichaclinicaController::class, 'edit'])->name('fichaclinica.edit');
+Route::put('/portal/updfichaclinica/{id}', [FichaclinicaController::class, 'update'])->name('fichaclinica.update');
+Route::delete('/portal/delfichaclinica/{id}', [FichaclinicaController::class, 'destroy'])->name('fichaclinica.destroy');
+Route::get('/portal/fichaclinicas/pdf-fichaclinicas', [FichaclinicaController::class, 'allpdf'])->name('fichaclinica.pdf');
+Route::get('/portal/fichaclinicas/excel-fichaclinicas', [FichaclinicaController::class, 'allexcel'])->name('fichaclinica.excel');
+//ruta de reportes de fichaclinica
+Route::get('/portal/reports/dynamic/fichaclinica', [FichaclinicaController::class, 'report'])->name('fichaclinica.report');
+Route::post('/portal/query-fichaclinica', [FichaclinicaController::class, 'query'])->name('fichaclinica.query');
+
+ //rutas de receta
+ Route::get('/portal/recetas/add-receta', [RecetaController::class, 'create'])->name('receta.create');
+ Route::post('/portal/add-receta', [RecetaController::class, 'store'])->name('receta.store');
+ Route::get('/portal/recetas/show-recetas', [RecetaController::class, 'show'])->name('receta.show');
+ Route::get('/portal/editar/{id}/receta', [RecetaController::class, 'edit'])->name('receta.edit');
+ Route::put('/portal/updreceta/{id}', [RecetaController::class, 'update'])->name('receta.update');
+ Route::delete('/portal/delreceta/{id}', [RecetaController::class, 'destroy'])->name('receta.destroy');
+ Route::get('/portal/recetas/pdf-recetas', [RecetaController::class, 'allpdf'])->name('receta.pdf');
+ Route::get('/portal/recetas/excel-recetas', [RecetaController::class, 'allexcel'])->name('receta.excel');
+ //ruta de reportes de receta
+ Route::get('/portal/reports/dynamic/receta', [RecetaController::class, 'report'])->name('receta.report');
+ Route::post('/portal/query-receta', [RecetaController::class, 'query'])->name('receta.query');
+ 
+//rutas de recibo
+Route::get('/portal/recibos/add-recibo', [ReciboController::class, 'create'])->name('recibo.create');
+Route::post('/portal/add-recibo', [ReciboController::class, 'store'])->name('recibo.store');
+Route::get('/portal/recibos/show-recibos', [ReciboController::class, 'show'])->name('recibo.show');
+Route::get('/portal/editar/{id}/recibo', [ReciboController::class, 'edit'])->name('recibo.edit');
+Route::put('/portal/updrecibo/{id}', [ReciboController::class, 'update'])->name('recibo.update');
+Route::delete('/portal/delrecibo/{id}', [ReciboController::class, 'destroy'])->name('recibo.destroy');
+Route::get('/portal/recibos/pdf-recibos', [ReciboController::class, 'allpdf'])->name('recibo.pdf');
+Route::get('/portal/recibos/excel-recibos', [ReciboController::class, 'allexcel'])->name('recibo.excel');
+//ruta de reportes de recibos
+Route::get('/portal/reports/dynamic/recibo', [ReciboController::class, 'report'])->name('recibo.report');
+Route::post('/portal/query-recibo', [ReciboController::class, 'query'])->name('recibo.query');
+
+//rutas de archivos
+Route::get('/portal/technical-archivos/add-archivo', [ArchivoController::class, 'create'])->name('archivo.create');
+Route::post('/portal/add-archivo', [ArchivoController::class, 'store'])->name('archivo.store');
+Route::get('/portal/technical-archivos/show-archivos', [ArchivoController::class, 'show'])->name('archivo.show');
+Route::get('/portal/technical-archivos/editar/{id}/archivo', [ArchivoController::class, 'edit'])->name('archivo.edit');
+Route::put('/portal/updarchivo/{id}', [ArchivoController::class, 'update'])->name('archivo.update');
+Route::delete('/portal/delarchivo/{id}', [ArchivoController::class, 'destroy'])->name('archivo.destroy');
+Route::get('/portal/technical-archivos/auxiliar', [ArchivoController::class, 'auxiliar'])->name('archivo.auxiliar');
+Route::get('/portal/technical-archivos/files/{id}/archivo', [ArchivoController::class, 'addfiles'])->name('archivo.files');
+Route::post('/portal/add-archivos/{id}', [ArchivoController::class, 'storefiles'])->name('archivo.storefiles');
+Route::get('/portal/technical-archivos/show-archivo-images/{id}', [ArchivoController::class, 'showimages'])->name('archivo.showimages');
+Route::get('/portal/technical-archivos/show-archivo-pdfs/{id}', [ArchivoController::class, 'showpdfs'])->name('archivo.showpdfs');
+Route::delete('/portal/delarchivo-image/{id}', [ArchivoController::class, 'destroyimage'])->name('archivo.destroyimage');
+Route::delete('/portal/delarchivo-pdf/{id}', [ArchivoController::class, 'destroypdf'])->name('archivo.destroypdf');
+Route::get('/portal/technical-archivos/download-image/{id}', [ArchivoController::class, 'downimage'])->name('archivo.downimage');
+Route::get('/portal/technical-archivos/download-pdf/{id}', [ArchivoController::class, 'downpdf'])->name('archivo.downpdf');
+Route::get('/portal/technical-archivos/pdf-archivo', [ArchivoController::class, 'allpdf'])->name('archivo.pdf');
+Route::get('/portal/technical-archivos/excel-archivo', [ArchivoController::class, 'allexcel'])->name('archivo.excel');
+//rutas de reportes de archivos
+Route::get('/portal/reports/dynamic/technical-archivos', [ArchivoController::class, 'report'])->name('archivo.report');
+Route::post('/portal/query-technical-archivos', [ArchivoController::class, 'query'])->name('archivo.query');
+
+
 
     //rutas de categorias
     Route::get('/portal/graduates/categories/add-category', [CategoryController::class, 'create'])->name('category.create');

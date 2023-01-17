@@ -7,11 +7,28 @@
     </div>
     <div class="container">
         <div class="row style_featured">
+        @can('consulta.index')
+            <div class="col-md-4">
+                <div>
+                    <a href="{{ route ('consulta.index')}}">
+                        <img src="{{URL::asset('icons/consulta.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <h2 style="color: maroon;">Consulta</h2>
+                        <p style="text-align: left;">
+                            <span class="fa fa-info-circle"></span>
+                            Usted podra registrar toda la informacion necesaria de un consulta, dicha informacion sera
+                            utilizada en otros procesos.
+                        </p>
+                        <a href="{{ route ('consulta.index')}}" class="btn btn-success" title="Ir">Ingresar</a>
+                    </a>
+                </div>
+            </div>
+            @endcan
+
         @can('paciente.index')
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('paciente.index')}}">
-                        <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <img src="{{URL::asset('icons/addpaciente.png')}}" alt="" class="img-rounded img-thumbnail" />
                         <h2 style="color: maroon;">Pacientes</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
@@ -29,7 +46,7 @@
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('odontologo.index')}}">
-                        <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <img src="{{URL::asset('icons/odontologo.png')}}" alt="" class="img-rounded img-thumbnail" />
                         <h2 style="color: maroon;">Odontologos</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
@@ -45,7 +62,7 @@
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('servicio.index')}}">
-                        <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <img src="{{URL::asset('icons/servicios.png')}}" alt="" class="img-rounded img-thumbnail" />
                         <h2 style="color: maroon;">Servicios</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
@@ -64,7 +81,7 @@
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('dient.index')}}">
-                        <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <img src="{{URL::asset('icons/dientes.png')}}" alt="" class="img-rounded img-thumbnail" />
                         <h2 style="color: maroon;">Dientes</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
@@ -82,7 +99,7 @@
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('parte.index')}}">
-                        <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <img src="{{URL::asset('icons/addpart.png')}}" alt="" class="img-rounded img-thumbnail" />
                         <h2 style="color: maroon;">Partes</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
@@ -100,7 +117,7 @@
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('tratamiento.index')}}">
-                        <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <img src="{{URL::asset('icons/tratamiento.png')}}" alt="" class="img-rounded img-thumbnail" />
                         <h2 style="color: maroon;">tratamientos</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
@@ -118,7 +135,7 @@
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('odontograma.index')}}">
-                        <img src="{{URL::asset('icons/student.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <img src="{{URL::asset('icons/odontograma.png')}}" alt="" class="img-rounded img-thumbnail" />
                         <h2 style="color: maroon;">Odontogramas</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
@@ -130,135 +147,129 @@
                 </div>
             </div>
             @endcan
-            @can('grad.index')
+
+
+            @can('fichaclinica.index')
             <div class="col-md-4">
                 <div>
-                    <a href="{{ route ('grad.index')}}">
-                        <img src="{{URL::asset('icons/egresados.png')}}" alt="imagen"
-                            class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Titulados</h2>
+                    <a href="{{ route ('fichaclinica.index')}}">
+                        <img src="{{URL::asset('icons/viewpaciente.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <h2 style="color: maroon;">fichaclinicas</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
-                            Aqui se respalda toda la informacion referente a estudiantes egresados como ser Acta,
-                            Trabajo final, Modalidades & más.
+                            Usted podra registrar toda la informacion necesaria de un fichaclinicas, dicha informacion sera
+                            utilizada en otros procesos.
                         </p>
-                        <a href="{{ route ('grad.index')}}" class="btn btn-success" title="Ir">Ingresar</a>
+                        <a href="{{ route ('fichaclinica.index')}}" class="btn btn-success" title="Ir">Ingresar</a>
                     </a>
                 </div>
             </div>
             @endcan
-            @can('prac.index')
+            
+            @can('archivo.index')
             <div class="col-md-4">
                 <div>
-                    <a href="{{ route ('prac.index')}}">
-                        <img src="{{URL::asset('icons/practice.png')}}" alt="" class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Prácticas Industriales</h2>
+                    <a href="{{ route ('archivo.index')}}">
+                        <img src="{{URL::asset('icons/viewphoto.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <h2 style="color: maroon;">archivos</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
-                            Es una actividad curricular del estudiante, consiste en una actividad supervisada con un rol
-                            profesional en ambiente laboral.
+                            Usted podra registrar toda la informacion necesaria de un archivos, dicha informacion sera
+                            utilizada en otros procesos.
                         </p>
-                        <a href="{{ route ('prac.index')}}" class="btn btn-success" title="More">Ingresar</a>
+                        <a href="{{ route ('archivo.index')}}" class="btn btn-success" title="Ir">Ingresar</a>
                     </a>
                 </div>
             </div>
             @endcan
-            @can('lab.index')
+            @can('receta.index')
             <div class="col-md-4">
                 <div>
-                    <a href="{{ route ('lab.index')}}">
-                        <img src="{{URL::asset('icons/labs.png')}}" alt="imagen" class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Laboratorios</h2>
+                    <a href="{{ route ('receta.index')}}">
+                        <img src="{{URL::asset('icons/addlist.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <h2 style="color: maroon;">recetas</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
-                            Es posible resguardar la informacion de los trabajos de investigacion de los estudiantes
-                            tales como guias, trabajos.
+                            Usted podra registrar toda la informacion necesaria de un recetas, dicha informacion sera
+                            utilizada en otros procesos.
                         </p>
-                        <a href="{{ route ('lab.index')}}" class="btn btn-success" title="More">Ingresar</a>
+                        <a href="{{ route ('receta.index')}}" class="btn btn-success" title="Ir">Ingresar</a>
                     </a>
                 </div>
             </div>
             @endcan
-            @can('visit.index')
+
+            @can('recibo.index')
             <div class="col-md-4">
                 <div>
-                    <a href="{{ route ('visit.index')}}">
-                        <img src="{{URL::asset('icons/visita.png')}}" alt="" class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Visitas Técnicas</h2>
-                        <p style="color: #00BFFF; text-align: left;">
+                    <a href="{{ route ('recibo.index')}}">
+                        <img src="{{URL::asset('icons/1addservicio.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <h2 style="color: maroon;">recibos</h2>
+                        <p style="text-align: left;">
+                            <span class="fa fa-info-circle"></span>
+                            Usted podra registrar toda la informacion necesaria de un recibos, dicha informacion sera
+                            utilizada en otros procesos.
+                        </p>
+                        <a href="{{ route ('recibo.index')}}" class="btn btn-success" title="Ir">Ingresar</a>
+                    </a>
+                </div>
+            </div>
+            @endcan
+       
+
+            @can('role.index')
+            <div class="col-md-4">
+                <div>
+                    <a href="{{ route ('role.index')}}">
+                        <img src="{{URL::asset('icons/areas.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <h2 style="color: maroon;">Servicios</h2>
+                        <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
                             Aqui se puede almacenar los documentos de respaldo (fotos e informes) de las visitas de los
-                            estudiantes.
+                            roles.
                         </p>
-                        <a href="{{ route ('visit.index')}}" class="btn btn-success" title="More">Ingresar</a>
+                        <a href="{{ route ('role.index')}}" class="btn btn-success" title="More">Ingresar</a>
                     </a>
                 </div>
             </div>
             @endcan
-            @can('doc.index')
+
+            @can('permission.index')
             <div class="col-md-4">
                 <div>
-                    <a href="{{ route ('doc.index')}}">
-                        <img src="{{URL::asset('icons/doc.png')}}" alt="" class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Documentos</h2>
-                        <p style="color: #00BFFF; text-align: left;">
-                            <span class="fa fa-info-circle"></span>
-                            En este modulo se registran documentos administrativos tales como modelos de cartas,
-                            programas analíticos, estructuras, etc.
-                        </p>
-                        <a href="{{ route ('doc.index')}}" class="btn btn-success" title="More">Ingresar</a>
-                    </a>
-                </div>
-            </div>
-            @endcan
-            @can('agre.index')
-            <div class="col-md-4">
-                <div>
-                    <a href="{{ route ('agre.index')}}">
-                        <img src="{{URL::asset('icons/convenio.png')}}" alt="" class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Convenios</h2>
+                    <a href="{{ route ('permission.index')}}">
+                        <img src="{{URL::asset('icons/viewvisit.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <h2 style="color: maroon;">Servicios</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
-                            Ing Industrial realiza convenios con diferentes empresas para el bien del estudiante dichos
-                            convenios son nacionales e internacionales.
+                            Aqui se puede almacenar los documentos de respaldo (fotos e informes) de las visitas de los
+                            permissions.
                         </p>
-                        <a href="{{ route ('agre.index')}}" class="btn btn-success" title="More">Ingresar</a>
+                        <a href="{{ route ('permission.index')}}" class="btn btn-success" title="More">Ingresar</a>
                     </a>
                 </div>
             </div>
             @endcan
-            @can('track.index')
+
+            @can('role_has_permission.index')
             <div class="col-md-4">
                 <div>
-                    <a href="{{ route ('track.index')}}">
-                        <img src="{{URL::asset('icons/trace.png')}}" alt="" class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Seguimiento Titulados</h2>
+                    <a href="{{ route ('role_has_permission.index')}}">
+                        <img src="{{URL::asset('icons/visita.png')}}" alt="" class="img-rounded img-thumbnail" />
+                        <h2 style="color: maroon;">Servicios</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
-                            Aqui se realiza seguimientos de tipo Acádemico, Laboral y Cultural, se realizara a
-                            estudiantes graduados.
+                            Aqui se puede almacenar los documentos de respaldo (fotos e informes) de las visitas de los
+                            role_has_permissions.
                         </p>
-                        <a href="{{ route('track.index') }}" class="btn btn-success" title="More">Ingresar</a>
+                        <a href="{{ route ('role_has_permission.index')}}" class="btn btn-success" title="More">Ingresar</a>
                     </a>
                 </div>
             </div>
             @endcan
-            @can('tra.index')
-            <div class="col-md-4">
-                <div>
-                    <a href="{{ route ('tra.index')}}">
-                        <img src="{{URL::asset('icons/training.png')}}" alt="" class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Cursos de Capacitación</h2>
-                        <p style="text-align: left;">
-                            <span class="fa fa-info-circle"></span>
-                            Se registran todos los cursos ofertados para dar apoyo extracurricular de las materias a los
-                            estudiantes.
-                        </p>
-                        <a href="{{ route('tra.index') }}" class="btn btn-success" title="More">Ingresar</a>
-                    </a>
-                </div>
-            </div>
-            @endcan
+
+           
+    
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('report.index')}}">

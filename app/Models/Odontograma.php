@@ -5,12 +5,25 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Tratamiento extends Model
+class Odontograma extends Model
 {
     use HasFactory;
 
 
     //relaciones
+
+    public function diente(){
+        return $this->hasOne('App\Models\Diente');
+    }
+    public function parte(){
+        return $this->hasOne('App\Models\Parte');
+    }
+    public function tratamiento(){
+        return $this->hasOne('App\Models\Tratamiento');
+    }
+    public function student(){
+        return $this->hasOne('App\Models\Student');
+    }
     public function tomo(){
         return $this->hasOne('App\Models\Tomo');
     }

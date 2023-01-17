@@ -4,13 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Role_has_permission;
+use App\Models\Role;
+use App\Models\Permission;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Storage;
 
 class RegisterController extends Controller
 {
     public function create(){
-        return view('auth.register');
+        $rol = Role::get(); 
+        return view('auth.register', compact('rol'));
     }
     
     public function store(){

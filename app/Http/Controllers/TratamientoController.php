@@ -29,7 +29,7 @@ class TratamientoController extends Controller
             'precio' => 'required',
         ]);
      
-        
+        $tratamiento = Tratamiento::findOrFail($id);
         $tratamiento->nombre = $request->nombre;
         $tratamiento->color = $request->color;
         $tratamiento->precio = $request->precio;

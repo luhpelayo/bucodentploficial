@@ -15,7 +15,8 @@ class CreateOdontogramasTable extends Migration
     {
         Schema::create('odontogramas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('diagnostico',255);
+            $table->text('diagnostico',60000);
+            
             $table->date('fechainicio');
             $table->date('fechafin');
 

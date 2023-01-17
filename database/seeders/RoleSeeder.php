@@ -90,7 +90,7 @@ class RoleSeeder extends Seeder
         Permission::create(['name' => 'consulta.show'])->syncRoles([$role1, $role2,$role3]);
         Permission::create(['name' => 'consulta.pdf'])->syncRoles([$role1, $role2]);
         Permission::create(['name' => 'consulta.excel'])->syncRoles([$role1, $role2]); 
-        
+        Permission::create(['name' => 'consulta.odonto'])->syncRoles([$role3]);
 
         //permisos para acceder a las rutas
         //MODULO DE RECETAS

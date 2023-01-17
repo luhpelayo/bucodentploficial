@@ -67,23 +67,23 @@
                 <label for="checkpassword">Verificar Contraseña</label>
                 <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" required>
               </div>
-              <label for="rol">Rol:</label>
-                <select name="rol" id="rol">
-                  <option value="Admin">Admin</option>
-<<<<<<< HEAD
-                <option value="Secretaria">Secretaria</option>
-                <option value="Doctor">Doctor</option>
-=======
-<<<<<<< HEAD
-                <option value="Secretaria">Secretaria</option>
-                <option value="Doctor">Doctor</option>
-=======
-                <option value="Director">Doctor</option>
-                <option value="Acreditacion">Secretaria</option>
-
->>>>>>> f11a3d61a40e529121d6f3588ac29bb30a44e5da
->>>>>>> 428a1646c36b84327111dbf2705593b36f99557f
-                </select>
+             
+           
+                <div class="form-group last mb-4">
+                    <label class="col-lg-3 control-label">Role:</label>
+                    <div class="col-lg-8">
+                        <select class="js-example-basic-single" id="rol" name="rol" style="width: 100%;">
+                            <option value="">Seleccionar Rol</option>
+                            @foreach($rol as $ro)
+                            <option value="{{ $ro->name }}">{{ $ro->name }}</option>
+                            @endforeach
+                          </select>
+                          @error('rol')
+                        <small class="text-danger">¡Campo Vacio!</small>
+                        @enderror
+                    </div>
+                </div>
+               
                 <br>
                 <br>
               <input type="submit" value="Registrar" class="btn text-white btn-block btn-primary" style="background-color: #00BFFF">

@@ -29,7 +29,7 @@ class ParteController extends Controller
             'estado' => ['required', 'digits:1'],
             
         ]);
-     
+        $parte = Parte::findOrFail($id);
         $parte->numeroparte = $request->numeroparte;
         $parte->nombre = $request->nombre;
         $parte->estado = $request->estado;

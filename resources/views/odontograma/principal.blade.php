@@ -2,40 +2,40 @@
 @section('content')
 <div class="container">
     <div class="page-header">
-        <h1 style="text-align:center; color: red; font-weight: bolder;">MODULO DE TRATAMIENTOS</h1>
+        <h1 style="text-align:center; color: red; font-weight: bolder;">MODULO DE ODONTOGRAMAS</h1>
     </div>
     <div class="container">
         <div class="row style_featured">
-            @can('tratamiento.create')
+            @can('odontograma.create')
             <div class="col-md-4">
                 <div>
-                    <a href="{{ route ('tratamiento.create')}}">
-                        <img src="{{URL::asset('icons/addstudent.png')}}" alt="imagen"
+                    <a href="{{ route ('odontograma.create')}}">
+                        <img src="{{URL::asset('icons/odonto.png')}}" alt="imagen"
                             class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Registrar tratamiento</h2>
+                        <h2 style="color: maroon;">Registrar odontograma</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
-                            Usted podra registrar toda la informacion necesaria de un tratamiento, dicha informacion sera
+                            Usted podra registrar toda la informacion necesaria de un odontograma, dicha informacion sera
                             utilizada en otros procesos.
                         </p>
-                        <a href="{{ route ('tratamiento.create')}}" class="btn btn-success" title="Ir">Registrar</a>
+                        <a href="{{ route ('odontograma.create')}}" class="btn btn-success" title="Ir">Registrar</a>
                     </a>
                 </div>
             </div>
             @endcan
-            @can('tratamiento.show')
+            @can('odontograma.show')
             <div class="col-md-4">
                 <div>
-                    <a href="{{ route ('tratamiento.show')}}">
-                        <img src="{{URL::asset('icons/viewstudent.png')}}" alt="imagen"
+                    <a href="{{ route ('odontograma.show')}}">
+                        <img src="{{URL::asset('icons/odontograma.png')}}" alt="imagen"
                             class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Mostrar partes</h2>
+                        <h2 style="color: maroon;">Mostrar odotograma</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
-                            Se visualiza toda la informacion de los tratamiento registrados ademas es posible editar,
+                            Se visualiza toda la informacion de los odontograma registrados ademas es posible editar,
                             eliminar o exportar toda la informacion.
                         </p>
-                        <a href="{{ route ('tratamiento.show')}}" class="btn btn-success" title="Ir">Mostrar</a>
+                        <a href="{{ route ('odontograma.show')}}" class="btn btn-success" title="Ir">Mostrar</a>
                     </a>
                 </div>
             </div>

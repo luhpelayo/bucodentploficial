@@ -2,21 +2,21 @@
 
 namespace App\Exports;
 
-use App\Models\Tratamiento;
+use App\Models\Odontograma;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
-class TratamientosExport implements WithHeadings, FromCollection
+class OdontogramasExport implements WithHeadings, FromCollection
 {
     /**
     * @return \Illuminate\Support\Collection
     */
     public function collection()
     {
-        $tratamientosData = Tratamiento::select('nombre','color','precio')->orderBy('nombre','Asc')->get();
-        return $tratamientosData; 
+        $odontogramasData = Odontograma::select('diagnostico','fechainicio','fechafin')->orderBy('nombre','Asc')->get();
+        return $odontogramasData; 
     }
 
     public function headings(): array{
-        return['nombre','color','precio'];
+        return['diagnostico','fechainicio','fechafin'];
     }
 }

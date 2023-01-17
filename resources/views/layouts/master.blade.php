@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>BUCODENT</title>
-  <meta content="Sistema web de Ing Industrial" name="description">
-  <meta content="Uagrm, Ing industrial, FCET" name="keywords">
+  <meta content="Sistema web de BUCODENT" name="description">
+  <meta content="BUCODENT" name="keywords">
   <meta content="Nells A. Vidal V." name="author">
   <!-- Favicons -->
   <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
@@ -57,6 +57,22 @@
         <ul>
           <li><a class="nav-link scrollto"><b> Hola {{ auth()->user()->name }}, Rol {{ auth()->user()->rol }} </b></a>
           </li>
+          <li class="dropdown"><a href="#"><span>Módulo Usuario:</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{{ route('portal.index')}}">Inicio</a></li>
+              @can('role.index')
+              <li><a href="{{ route('paciente.index')}}">Roles</a></li>
+              @endcan
+              @can('permission.index')
+              <li><a href="{{ route('odontologo.index')}}">permission</a></li>
+              @endcan
+              @can('role_has_permission.index')
+              <li><a href="{{ route('role_has_permission.index')}}">Rol/Permisos</a></li>
+              @endcan
+          
+            </ul>
+          </li>
+
           <li class="dropdown"><a href="#"><span>Módulo Odontograma:</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="{{ route('portal.index')}}">Inicio</a></li>
@@ -93,7 +109,24 @@
               @can('servicio.index')
               <li><a href="{{ route('servicio.index')}}">Servicios</a></li>
               @endcan
+
+              @can('consulta.index')
+              <li><a href="{{ route('consulta.index')}}">Consultas</a></li>
+              @endcan
           
+              @can('fichaclinica.index')
+              <li><a href="{{ route('fichaclinica.index')}}">fichaclinicas</a></li>
+              @endcan
+              @can('archivo.index')
+              <li><a href="{{ route('archivo.index')}}">archivos</a></li>
+              @endcan
+              @can('receta.index')
+              <li><a href="{{ route('receta.index')}}">recetas</a></li>
+              @endcan
+
+              @can('recibo.index')
+              <li><a href="{{ route('recibo.index')}}">recibos</a></li>
+              @endcan
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Opciones</span> <i class="bi bi-chevron-down"></i></a>
