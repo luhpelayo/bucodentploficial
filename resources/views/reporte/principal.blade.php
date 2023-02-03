@@ -6,40 +6,23 @@
     </div>
     <div class="container">
         <div class="row style_featured">
-            @can('consulta.create')
+           
             <div class="col-md-4">
                 <div>
-                    <a href="{{ route ('consulta.create')}}">
-                        <img src="{{URL::asset('icons/addpaciente.png')}}" alt="imagen"
+                    <a href="{{ route ('reporte.show')}}">
+                        <img src="{{URL::asset('icons/reporte.png')}}" alt="imagen"
                             class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Registrar consulta</h2>
+                        <h2 style="color: maroon;">MOSTRAR REPORTE GRAFICO</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
-                            Usted podra registrar toda la informacion necesaria de un consulta, dicha informacion sera
-                            utilizada en otros procesos.
-                        </p>
-                        <a href="{{ route ('consulta.create')}}" class="btn btn-success" title="Ir">Registrar</a>
-                    </a>
-                </div>
-            </div>
-            @endcan
-            
-            <div class="col-md-4">
-                <div>
-                    <a href="{{ route ('consulta.show')}}">
-                        <img src="{{URL::asset('icons/consulta.png')}}" alt="imagen"
-                            class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">MOSTRAR CONSULTAS</h2>
-                        <p style="text-align: left;">
-                            <span class="fa fa-info-circle"></span>
-                            Se visualiza toda la informacion de los consulta registrados ademas es posible editar,
+                            Se visualiza toda la informacion de los reporte registrados ademas es posible editar,
                             eliminar o exportar toda la informacion.
                         </p>
-                        <a href="{{ route ('consulta.show')}}" class="btn btn-success" title="Ir">Mostrar</a>
+                        <a href="{{ route ('reporte.show')}}" class="btn btn-success" title="Ir">Mostrar</a>
                     </a>
                 </div>
             </div>
-      
+           
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('portal.index')}}">

@@ -19,7 +19,7 @@
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Name:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" name="name" id="name" type="text" placeholder="ejemplo Nells Antonio">
+                        <input class="form-control" name="name" id="name" type="text" placeholder="ejemplo ">
                         @error('name')
                         <small class="text-danger">¡Introduzca  Nombre del role!</small>
                         @enderror
@@ -28,7 +28,7 @@
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Guard_Name:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" name="guard_name" id="guard_name" type="text" placeholder="ejemplo Vidal Vargas">
+                        <input class="form-control" name="guard_name" id="guard_name" type="text" placeholder="ejemplo ">
                             @error('guard_name')
                         <small class="text-danger">¡Introduzca guard_name del role!</small>
                         @enderror

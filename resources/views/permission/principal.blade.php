@@ -12,7 +12,7 @@
                     <a href="{{ route ('permission.create')}}">
                         <img src="{{URL::asset('icons/addpermission.png')}}" alt="imagen"
                             class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Registrar Servicio</h2>
+                        <h2 style="color: maroon;">Registrar </h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
                             Usted podra registrar toda la informacion necesaria de un permission, dicha informacion sera
@@ -29,7 +29,7 @@
                     <a href="{{ route ('permission.show')}}">
                         <img src="{{URL::asset('icons/addpermission.png')}}" alt="imagen"
                             class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Mostrar Roles</h2>
+                        <h2 style="color: maroon;">Mostrar Permisos</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
                             Se visualiza toda la informacion de los permissions registrados ademas es posible editar,

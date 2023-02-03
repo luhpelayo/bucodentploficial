@@ -6,13 +6,13 @@
     </div>
     <div class="container">
         <div class="row style_featured">
-            @can('role.create')
+            
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('role.create')}}">
                         <img src="{{URL::asset('icons/addrole.png')}}" alt="imagen"
                             class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Registrar Servicio</h2>
+                        <h2 style="color: maroon;">Registrar Rol</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
                             Usted podra registrar toda la informacion necesaria de un role, dicha informacion sera
@@ -22,8 +22,7 @@
                     </a>
                 </div>
             </div>
-            @endcan
-            @can('role.show')
+         
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('role.show')}}">
@@ -39,7 +38,7 @@
                     </a>
                 </div>
             </div>
-            @endcan
+         
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('portal.index')}}">

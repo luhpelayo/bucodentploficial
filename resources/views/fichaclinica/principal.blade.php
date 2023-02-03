@@ -10,36 +10,36 @@
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('fichaclinica.create')}}">
-                        <img src="{{URL::asset('icons/addvisit.png')}}" alt="imagen"
+                        <img src="{{URL::asset('icons/addpaciente.png')}}" alt="imagen"
                             class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Registrar Ficha clinica</h2>
+                        <h2 style="color: maroon;">Registrar fichaclinica</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
-                            Usted puede registrar toda la información de las fichas clinicas  realizadas y adjuntar
-                            documentación.
+                            Usted podra registrar toda la informacion necesaria de un fichaclinica, dicha informacion sera
+                            utilizada en otros procesos.
                         </p>
                         <a href="{{ route ('fichaclinica.create')}}" class="btn btn-success" title="Ir">Registrar</a>
                     </a>
                 </div>
             </div>
             @endcan
-            @can('fichaclinica.show')
+            
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('fichaclinica.show')}}">
-                        <img src="{{URL::asset('icons/viewvisit.png')}}" alt="imagen"
+                        <img src="{{URL::asset('icons/fichaclinica.png')}}" alt="imagen"
                             class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Mostrar fichas clinicas</h2>
+                        <h2 style="color: maroon;">MOSTRAR FICHA CLINICA</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
-                            Se puede visualizar toda la información registrada y ademas descargar toda la documentación
-                            adjuntada.
+                            Se visualiza toda la informacion de los fichaclinica registrados ademas es posible editar,
+                            eliminar o exportar toda la informacion.
                         </p>
                         <a href="{{ route ('fichaclinica.show')}}" class="btn btn-success" title="Ir">Mostrar</a>
                     </a>
                 </div>
             </div>
-            @endcan
+      
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('portal.index')}}">

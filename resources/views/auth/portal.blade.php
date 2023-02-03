@@ -7,7 +7,7 @@
     </div>
     <div class="container">
         <div class="row style_featured">
-        @can('consulta.index')
+    
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('consulta.index')}}">
@@ -22,7 +22,7 @@
                     </a>
                 </div>
             </div>
-            @endcan
+           
 
         @can('paciente.index')
             <div class="col-md-4">
@@ -217,12 +217,12 @@
             @endcan
        
 
-            @can('role.index')
+            
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('role.index')}}">
                         <img src="{{URL::asset('icons/areas.png')}}" alt="" class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Servicios</h2>
+                        <h2 style="color: maroon;">Role</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
                             Aqui se puede almacenar los documentos de respaldo (fotos e informes) de las visitas de los
@@ -232,14 +232,14 @@
                     </a>
                 </div>
             </div>
-            @endcan
+           
 
             @can('permission.index')
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('permission.index')}}">
                         <img src="{{URL::asset('icons/viewvisit.png')}}" alt="" class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Servicios</h2>
+                        <h2 style="color: maroon;">Permission</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
                             Aqui se puede almacenar los documentos de respaldo (fotos e informes) de las visitas de los
@@ -251,12 +251,12 @@
             </div>
             @endcan
 
-            @can('role_has_permission.index')
+           
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('role_has_permission.index')}}">
                         <img src="{{URL::asset('icons/visita.png')}}" alt="" class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Servicios</h2>
+                        <h2 style="color: maroon;">Roles Permissos</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
                             Aqui se puede almacenar los documentos de respaldo (fotos e informes) de las visitas de los
@@ -266,24 +266,26 @@
                     </a>
                 </div>
             </div>
-            @endcan
-
            
-    
+           
             <div class="col-md-4">
                 <div>
-                    <a href="{{ route ('report.index')}}">
+                    <a href="{{ route ('reporte.index')}}">
                         <img src="{{URL::asset('icons/report.png')}}" alt="" class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Reportes y Gráficos</h2>
-                        <p style="color: #00BFFF; text-align: left;">
+                        <h2 style="color: maroon;">Reporte</h2>
+                        <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
-                            Se generan informes estadisticos y Dinamicos sobre cualquier modulo en base a la informacion
-                            que usted desee.
+                            Usted podra registrar toda la informacion necesaria de un reporte, dicha informacion sera
+                            utilizada en otros procesos.
                         </p>
-                        <a href="{{ route('report.index') }}" class="btn btn-success" title="More">Ingresar</a>
+                        <a href="{{ route ('reporte.index')}}" class="btn btn-success" title="Ir">Ingresar</a>
                     </a>
                 </div>
             </div>
+         
+           
+    
+           
         </div>
     </div>
 </div>

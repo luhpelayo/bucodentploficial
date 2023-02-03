@@ -24,8 +24,8 @@ class TratamientoController extends Controller
 
     public function update(Request $request, $id){
         $validated = $request->validate([
-            'nombre' => 'required|max:30',
-            'color' => 'required|max:30',
+            'nombre' => 'required',
+            'color' => 'required',
             'precio' => 'required',
         ]);
      
@@ -41,8 +41,8 @@ class TratamientoController extends Controller
 
     public function store(Request $request){
         $validated = $request->validate([
-            'nombre' => 'required|max:30',
-            'color' => 'required|max:30',
+            'nombre' => 'required',
+            'color' => 'required',
             'precio' => 'required',
         ]);
            

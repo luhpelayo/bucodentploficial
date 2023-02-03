@@ -28,22 +28,25 @@
         <thead >
           <tr>
             
-          <th>Alergia</th>
-      <th>Radiografia</th>
-      <th>Archivo</th>
-        <th>Consulta</th>
+      <th>Paciente</th>
+      <th>Odontologo</th>
+      <th>Odontograma</th>
+      <th>Servicio</th>
+      <th>Fecha Hora</th>
         
           </tr>
         </thead>
         <tbody>
-          @foreach ($fichaclinicas as $fichaclinica)
+          @foreach ($consultas as $consulta)
           <tr>
             
           
-          <td>{{ $fichaclinica->alergia}}</td>
-      <td>{{ $fichaclinica->radiografia}}</td>
-        <td>{{ $fichaclinica->idarchivo }} </td>
-        <td>{{ $fichaclinica->consultaid }} </td>
+
+        <td>{{ $consulta->pacienteid }} </td>
+        <td>{{ $consulta->odontologoid }} </td>
+        <td>{{ $consulta->odontogramaid }} </td>
+        <td>{{ $consulta->servicioid }} </td>
+        <td>{{ $consulta->fechahora }}</td>
           </tr>
           @endforeach
         </tbody>

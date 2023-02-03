@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
   <div class="page-header">
-    <h1 style="text-align:center; color: red; font-weight: bolder;">LISTA DE SERVICIOS REGISTRADOS</h1>
+    <h1 style="text-align:center; color: red; font-weight: bolder;">LISTA DE ROLES REGISTRADOS</h1>
   </div>
   <div style="text-align: center">
     @can('role.create')

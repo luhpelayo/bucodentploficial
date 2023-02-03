@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Models\Receta;
 use App\Models\Consulta;
 use App\Models\Paciente;
+
 use PDF;
 use Carbon\Carbon;
 use App\Exports\RecetasExport;
@@ -56,9 +57,12 @@ class RecetaController extends Controller
     }
 
     public function show(){
-        $recetas = Receta::with('consulta')->get();
-        //dd($tomos); die();
-        return view ('recetas.viewReceta',compact('recetas'));
+        //$recetas = Receta::with('recetas')->get();
+        $recetas = Receta::all();
+     
+        //dd($recetas);
+         
+        return view ('receta.viewReceta',compact('recetas'));
     }
 
     public function destroy($id){

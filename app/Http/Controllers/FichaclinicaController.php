@@ -3,134 +3,161 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Fichaclinica;
-use App\Models\Consulta;
-use App\Models\Archivo;
-use App\Models\Paciente;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
-use Carbon\Carbon;
+use App\Models\Odontograma;
+use App\Models\Tratamiento;
+use App\Models\Diente;
+use App\Models\Parte;
+use App\Models\Archivo;
+use App\Models\Consulta;
+use App\Models\Servicio;
+
+use App\Models\Fichaclinica;
 use PDF;
+use Carbon\Carbon;
 use App\Exports\FichaclinicasExport;
 use Maatwebsite\Excel\Facades\Excel;
-
 class FichaclinicaController extends Controller
 {
     public function create(){
         $archivos = Archivo::get();
-        $pacientes = Paciente::get();
-        return view ('fichaclinica.addFichaclinica',compact('archivos','pacientes'));
-    }
-
-    public function edit($id){
-        $fichaclinica = Fichaclinica::with('archivo','paciente')->findOrFail($id);
-        return view('fichaclinica.editFichaclinica',compact('fichaclinica','archivo','paciente'));
-    }
-
-    public function update(Request $request, $id){
-        $validated = $request->validate([
-            'idarchivo' => 'required',
-            'consultaid' => 'required',
-            'alergia' => 'required|max:30',
-            'radiografia' => 'required|max:30',
-            
-        ]);
-        $fichaclinica = Fichaclinica::findOrFail($id);
-        $fichaclinica->alergia = $request->alergia;
-        $fichaclinica->radiografia = $request->radiografia;
-        $fichaclinica->idarchivo = $request->idarchivo;
-        $fichaclinica->consultaid = $request->consultaid;
-        $fichaclinica->save();
-        alert()->success('Datos Actualizados','Mostrando Registros')->position('top-end')->autoclose(2000);
-        return redirect()->route('fichaclinica.show');
-
+        $consultas = Consulta::get();
+      
+        return view ('fichaclinica.addFichaclinica', compact('archivos','consultas'));
     }
 
     public function store(Request $request){
         $validated = $request->validate([
-            'alergia' => 'required|max:30',
-            'radiografia' => 'required|max:30',
-            'idarchivo' => 'required',
-            'consultaid' => 'required',
-        ]);
+            'alergia' => 'required',
+            'radiografia' => 'required',
+            'alergia' => 'required',
+            'archivoid3' => 'required',
+            'consultaid3' => 'required',
+           
        
+        ]);
+        //dd($request->all()); die();
+        $fichaclinica = new Fichaclinica;
+        $fichaclinica->alergia = $request->alergia;
+        $fichaclinica->radiografia = $request->radiografia;
+        $fichaclinica->idarchivo = $request->archivoid3;
+        $fichaclinica->consultaid = $request->consultaid3;
         
-            
-            $fichaclinica = new Fichaclinica;
-            $fichaclinica->alergia = $request->alergia;
-            $fichaclinica->radiografia = $request->radiografia;
-            $fichaclinica->idarchivo = $request->idarchivo;
-            $fichaclinica->consultaid = $request->consultaid;
-            $fichaclinica->save();
-            alert()->success('Registro Exitoso','Mostrando Registros')->position('top-end')->autoclose(2000);
-            return redirect()->route('fichaclinica.show');
+        
+        $fichaclinica->save();
+        alert()->success('Registro Exitoso','Mostrando Registros')->position('top-end')->autoclose(2000);
+        return redirect()->route('fichaclinica.show');
+
+    }
+
+    public function edit($id){
+        $fichaclinica = Fichaclinica::findOrFail($id);
+       
+       
+        $archivos = Archivo::get();
+        $consultas = Consulta::get();
+        //dd($servicios);
+        //$archivos = Archivo::get();
+        //$consultas = Consulta::get();
+        //$odontogramas = Odontograma::get();
+        //$servicios = Servicio::get();
+        return view('fichaclinica.editFichaclinica',compact('fichaclinica','archivos','consultas'));
+    }
+
+    public function update(Request $request, $id){
+        $validated = $request->validate([
+            'alergia' => 'required',
+            'radiografia' => 'required',
+            'alergia' => 'required',
+            'archivoid3' => 'required',
+            'consultaid3' => 'required',
+          
+        ]);
+        //dd($request->all()); die();
+        $fichaclinica = Fichaclinica::findOrFail($id);
+        $fichaclinica->alergia = $request->alergia;
+        $fichaclinica->radiografia = $request->radiografia;
+        $fichaclinica->idarchivo = $request->archivoid3;
+        $fichaclinica->consultaid = $request->consultaid3;
+       
+        $fichaclinica->save();
+        alert()->success('Datos Actualizados','Mostrando Registros')->position('top-end')->autoclose(2000);
+        return redirect()->route('fichaclinica.show');
     }
 
     public function show(){
-        $fichaclinicas = Fichaclinica::with('archivo','consulta')->get();
+        $fichaclinicas = Fichaclinica::all();
+     
+       //dd($fichaclinicas);
         return view ('fichaclinica.viewFichaclinica', compact('fichaclinicas'));
     }
 
     public function destroy($id){
         $fichaclinica = Fichaclinica::findOrFail($id);
-        if ($fichaclinica->paciente_image != null) {
-            Storage::disk('images')->delete($fichaclinica->paciente_image);
-        }
         $fichaclinica->delete();
-        alert()->success('Ficha clinica Eliminado','Mostrando Registros')->position('top-end')->autoclose(2000);
+        alert()->success('Actividad Cultural Eliminado','Mostrando Registros')->position('top-end')->autoclose(2000);
         return back();
     }
 
+
+    ///modificar
     public function allpdf(){
-        $fichaclinicas = Fichaclinica::with('archivo','consulta')->orderBy('alergia')->get();
+        $fichaclinicas = Fichaclinica::orderBy('fechahora')->get();
         $fecha = Carbon::now();
         $cantidad = Fichaclinica::count();   
         $pdf = PDF::loadView('fichaclinica.staticpdf', compact('fichaclinicas','fecha','cantidad'));
-        return $pdf->download('fichaclinica.pdf');
+        return $pdf->download('fichaclinicas.pdf');
     }
 
     public function allexcel(){
         return Excel::download(new FichaclinicasExport, 'fichaclinicas.xlsx');
     }
 
-    //REPORTES
     public function report()
     {
         $archivos = Archivo::get();
         $consultas = Consulta::get();
-        return view('report.dynamic.fichaclinica.data', compact('archivos','consultas'));
+        $odontogramas = Odontograma::get();
+        $servicios = Servicio::get();
+        return view('report.dynamic.fichaclinica.data', compact('archivos','consultas','odontogramas','servicios'));
     }
 
-    public function query(Request $request)
-    {
+    public function query(Request $request){
         $consults = null;
-        $alergia = $request->alergia;
-        $radiografia = $request->radiografia;
-        $idarchivo = $request->idarchivo;
+        $archivoid = $request->archivoid;
         $consultaid = $request->consultaid;
+        
+        $fechahora = $request->fechahora;
+        //dd($request->all()); die();
         $consults = Fichaclinica::select('*')->where(function ($query) use ($request){
-            if ($request->alergia != null) {
-                $query->where('alergia','LIKE','%'.$request->alergia.'%');
-            }
-            if ($request->radiografia != null) {
-                $query->where('radiografia','LIKE','%'.$request->radiografia.'%');
-            }
-            if ($request->idarchivo != null) {
-                $query->where('idarchivo','LIKE','%'.$request->idarchivo.'%');
+            if ($request->archivoid != null) {
+                $query->where('archivoid','LIKE','%'.$request->archivoid.'%');
             }
             if ($request->consultaid != null) {
                 $query->where('consultaid','LIKE','%'.$request->consultaid.'%');
             }
-        })->orderBy('alergia', 'ASC')->get();
+            if ($request->odontogramaid != null) {
+                $query->where('odontogramaid','LIKE','%'.$request->odontogramaid.'%');
+            }
+            if ($request->servicioid != null) {
+                $query->where('servicioid','LIKE','%'.$request->servicioid.'%');
+            }
+            if ($request->fechahora != null) {
+                $query->where('fechahora','LIKE','%'.$request->fechahora.'%');
+            }
+           
+        })->orderBy('fechahora', 'Asc')->get();
 
         if (empty($consults)) {
-            alert()->error('Consulta Vacia','Por Favor rellene algun campo')->position('top-end')->autoclose(2000);
+            alert()->error('Fichaclinica Vacia','Por Favor rellene algun campo')->position('top-end')->autoclose(2000);
             return back();
         }
 
+        //dd($consults, $request->all()); die();
         $fecha = Carbon::now();
         $cantidad = count($consults);
-        $pdf = PDF::loadView('report.dynamic.fichaclinica.pdf', compact('consults','fecha','cantidad','alergia','radiografia','idarchivo','consultaid'));
+        $pdf = PDF::loadView('report.dynamic.fichaclinica.pdf', compact('consults','fecha','cantidad','archivoid','consultaid','odontogramaid','servicioid','fechahora'));
         return $pdf->stream();
+
     }
 }

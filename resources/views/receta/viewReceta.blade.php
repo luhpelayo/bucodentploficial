@@ -24,7 +24,7 @@
       @foreach ($recetas as $receta)
       <tr>
         <td>{{ $receta->descripcion }}</td>
-        <td>{{ $receta->consulta->pacienteid }}</td>
+        <td>{{ $receta->idconsulta }}</td>
         <td style="text-align: center">
           @can('receta.edit')
           <a class="btn btn-warning btn-sm" href="{{ route('receta.edit', $receta->id) }}">Editar</a>

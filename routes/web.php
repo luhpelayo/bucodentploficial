@@ -50,7 +50,7 @@ use App\Http\Controllers\FichaclinicaController;
 use App\Http\Controllers\ArchivoController;
 use App\Http\Controllers\ReciboController;
 use App\Http\Controllers\RecetaController;
-
+use App\Http\Controllers\ReporteController;
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome.index');
@@ -106,6 +106,11 @@ Route::get('/portal/consultas', function(){
     return view('consulta.principal');
 })->name('consulta.index');
 
+//modulo fichaclinica
+Route::get('/portal/fichaclinicas', function(){
+    return view('fichaclinica.principal');
+})->name('fichaclinica.index');
+
 //modulo permission
 Route::get('/portal/permissions', function(){
     return view('permission.principal');
@@ -155,6 +160,10 @@ Route::get('/portal/recetas', function(){
 Route::get('/portal/recibos', function(){
     return view('recibo.principal');
 })->name('recibo.index');
+//modulo reporte
+Route::get('/portal/reportes', function(){
+    return view('reporte.principal');
+})->name('reporte.index');
 
 
     //modulo egresados
@@ -433,6 +442,40 @@ Route::get('/portal/consultas/excel-consultas', [ConsultaController::class, 'all
 Route::get('/portal/reports/dynamic/consulta', [ConsultaController::class, 'report'])->name('consulta.report');
 Route::post('/portal/query-consulta', [ConsultaController::class, 'query'])->name('consulta.query');
 
+
+//rutas de Reportes
+Route::get('/portal/reportes/add-reporte', [ReporteController::class, 'create'])->name('reporte.create');
+Route::post('/portal/add-reporte', [ReporteController::class, 'store'])->name('reporte.store');
+Route::get('/portal/reportes/show-reportes', [ReporteController::class, 'show'])->name('reporte.show');
+Route::get('/portal/editar/{id}/reporte', [ReporteController::class, 'edit'])->name('reporte.edit');
+Route::put('/portal/updreporte/{id}', [ReporteController::class, 'update'])->name('reporte.update');
+Route::delete('/portal/delreporte/{id}', [ReporteController::class, 'destroy'])->name('reporte.destroy');
+Route::get('/portal/reportes/pdf-reportes', [ReporteController::class, 'allpdf'])->name('reporte.pdf');
+Route::get('/portal/reportes/excel-reportes', [ReporteController::class, 'allexcel'])->name('reporte.excel');
+
+//ruta de reportes de reportes
+Route::get('/portal/reports/dynamic/reporte', [ReporteController::class, 'report'])->name('reporte.report');
+Route::post('/portal/query-reporte', [ReporteController::class, 'query'])->name('reporte.query');
+
+
+
+
+//rutas de ficha
+Route::get('/portal/fichaclinicas/add-fichaclinica', [FichaclinicaController::class, 'create'])->name('fichaclinica.create');
+Route::post('/portal/add-fichaclinica', [FichaclinicaController::class, 'store'])->name('fichaclinica.store');
+Route::get('/portal/fichaclinicas/show-fichaclinicas', [FichaclinicaController::class, 'show'])->name('fichaclinica.show');
+Route::get('/portal/editar/{id}/fichaclinica', [FichaclinicaController::class, 'edit'])->name('fichaclinica.edit');
+Route::put('/portal/updfichaclinica/{id}', [FichaclinicaController::class, 'update'])->name('fichaclinica.update');
+Route::delete('/portal/delfichaclinica/{id}', [FichaclinicaController::class, 'destroy'])->name('fichaclinica.destroy');
+Route::get('/portal/fichaclinicas/pdf-fichaclinicas', [FichaclinicaController::class, 'allpdf'])->name('fichaclinica.pdf');
+Route::get('/portal/fichaclinicas/excel-fichaclinicas', [FichaclinicaController::class, 'allexcel'])->name('fichaclinica.excel');
+
+//ruta de reportes de fichaclinicas
+Route::get('/portal/reports/dynamic/fichaclinica', [FichaclinicaController::class, 'report'])->name('fichaclinica.report');
+Route::post('/portal/query-fichaclinica', [FichaclinicaController::class, 'query'])->name('fichaclinica.query');
+
+
+
   //rutas de roles
   Route::get('/portal/roles/add-role', [RoleController::class, 'create'])->name('role.create');
   Route::post('/portal/add-role', [RoleController::class, 'store'])->name('role.store');
@@ -527,19 +570,6 @@ Route::get('/portal/archivos/excel-archivos', [ArchivoController::class, 'allexc
 Route::get('/portal/reports/dynamic/archivo', [ArchivoController::class, 'report'])->name('archivo.report');
 Route::post('/portal/query-archivo', [ArchivoController::class, 'query'])->name('archivo.query');
 
-
-//rutas de fichaclinica
-Route::get('/portal/fichaclinicas/add-fichaclinica', [FichaclinicaController::class, 'create'])->name('fichaclinica.create');
-Route::post('/portal/add-fichaclinica', [FichaclinicaController::class, 'store'])->name('fichaclinica.store');
-Route::get('/portal/fichaclinicas/show-fichaclinicas', [FichaclinicaController::class, 'show'])->name('fichaclinica.show');
-Route::get('/portal/editar/{id}/fichaclinica', [FichaclinicaController::class, 'edit'])->name('fichaclinica.edit');
-Route::put('/portal/updfichaclinica/{id}', [FichaclinicaController::class, 'update'])->name('fichaclinica.update');
-Route::delete('/portal/delfichaclinica/{id}', [FichaclinicaController::class, 'destroy'])->name('fichaclinica.destroy');
-Route::get('/portal/fichaclinicas/pdf-fichaclinicas', [FichaclinicaController::class, 'allpdf'])->name('fichaclinica.pdf');
-Route::get('/portal/fichaclinicas/excel-fichaclinicas', [FichaclinicaController::class, 'allexcel'])->name('fichaclinica.excel');
-//ruta de reportes de fichaclinica
-Route::get('/portal/reports/dynamic/fichaclinica', [FichaclinicaController::class, 'report'])->name('fichaclinica.report');
-Route::post('/portal/query-fichaclinica', [FichaclinicaController::class, 'query'])->name('fichaclinica.query');
 
  //rutas de receta
  Route::get('/portal/recetas/add-receta', [RecetaController::class, 'create'])->name('receta.create');

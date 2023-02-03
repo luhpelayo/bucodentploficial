@@ -6,7 +6,7 @@
     </div>
     <div class="container">
         <div class="row style_featured">
-            @can('role_has_permission.create')
+         
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('role_has_permission.create')}}">
@@ -22,14 +22,13 @@
                     </a>
                 </div>
             </div>
-            @endcan
-            @can('role_has_permission.show')
+          
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('role_has_permission.show')}}">
                         <img src="{{URL::asset('icons/viewstudent.png')}}" alt="imagen"
                             class="img-rounded img-thumbnail" />
-                        <h2 style="color: maroon;">Mostrar odotograma</h2>
+                        <h2 style="color: maroon;">Mostrar Permissos</h2>
                         <p style="text-align: left;">
                             <span class="fa fa-info-circle"></span>
                             Se visualiza toda la informacion de los role_has_permission registrados ademas es posible editar,
@@ -39,7 +38,7 @@
                     </a>
                 </div>
             </div>
-            @endcan
+         
             <div class="col-md-4">
                 <div>
                     <a href="{{ route ('portal.index')}}">

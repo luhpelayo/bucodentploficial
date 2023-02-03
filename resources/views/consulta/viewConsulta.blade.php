@@ -1,5 +1,18 @@
 @extends('layouts.master')
 @section('content')
+<?php
+
+$archivo = "archivo4.txt";
+  
+      $contador = intval(trim(file_get_contents($archivo)));
+
+      $file = fopen($archivo, "w");
+      fwrite($file, $contador+1 . PHP_EOL);
+
+      $file = fopen($archivo, "r");
+      echo '<div style="position:fixed;bottom:20px;z-index:9;right:35px;background: #ff5a19;padding: 2px 10px;color: #fff;font-size: 30px;border-radius: 20px;">'. fgets($file). '</div>' ;
+      fclose($file);
+?>
 <div class="container">
   <div class="page-header">
     <h1 style="text-align:center; color: red; font-weight: bolder;">LISTA DE consultas</h1>
@@ -33,9 +46,9 @@
         <td>{{ $consulta->servicioid }} </td>
         <td>{{ $consulta->fechahora }}</td>
         <td style="text-align: center">
-          @can('consulta.edit')
+          
           <a class="btn btn-success btn-sm" href="{{ route('consulta.edit', $consulta->id) }}">Agregar Odontograma</a>
-          @endcan
+       
           @can('consulta.destroy')
           <form action="{{ route('consulta.destroy', $consulta->id) }}" method="post" style="display: inline-block">
             @csrf

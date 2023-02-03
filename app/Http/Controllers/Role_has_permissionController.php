@@ -18,7 +18,7 @@ class Role_has_permissionController extends Controller
         $roles = Role::get();
         $permissions = Permission::get();
       
-        return view ('role_has_permission.addRole_has_permission', compact('roles','permissions','partes'));
+        return view ('role_has_permission.addRole_has_permission', compact('roles','permissions'));
     }
 
     public function store(Request $request){
@@ -45,7 +45,7 @@ class Role_has_permissionController extends Controller
         $roles = Role::get();
         $permissions = Permission::get();
        
-        return view('role_has_permission.editRole_has_permission',compact('role_has_permission','roles','permissions','partes'));
+        return view('role_has_permission.editRole_has_permission',compact('role_has_permission','roles','permissions'));
     }
 
     public function update(Request $request, $id){
@@ -98,7 +98,7 @@ class Role_has_permissionController extends Controller
         $roles = Role::get();
         $permissions = Permission::get();
      
-        return view('report.dynamic.role_has_permission.data', compact('roles','permissions','partes'));
+        return view('report.dynamic.role_has_permission.data', compact('roles','permissions'));
     }
 
     public function query(Request $request){

@@ -1,6 +1,5 @@
 @extends('layouts.master')
 @section('content')
-
 <head>
 
   <script src="https://www.gstatic.com/charts/loader.js"></script>
@@ -15,11 +14,11 @@
       data.addColumn('string', 'Element');
       data.addColumn('number', 'Percentage');
       data.addRows([
-        ['Recibido',  {{ $recibido_count }}],
-        ['Verificado',  {{ $verificado_count }}],
-        ['Proceso', {{ $derivado_count }}],
-        ['Rechazados', {{ $noterminado_count }}],
-        ['Finalizado', {{ $terminado_count }}]
+        ['Limpieza',  {{ $recibido_count }}],
+        ['Extraccion',  {{ $verificado_count }}],
+        ['Ortodoncia', {{ $derivado_count }}],
+        ['Examen Bucodental', {{ $noterminado_count }}],
+        ['Obturacion o llenado dental', {{ $terminado_count }}]
       ]);
 
       // Instantiate and draw the chart.
@@ -33,5 +32,4 @@
   <div id="myPieChart"/>
   
 </body>
-
 @endsection
